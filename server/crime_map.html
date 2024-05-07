@@ -1,0 +1,4272 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_8c260f1ac2d43b3e128bc745c0d25f56 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_8c260f1ac2d43b3e128bc745c0d25f56" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_8c260f1ac2d43b3e128bc745c0d25f56 = L.map(
+                "map_8c260f1ac2d43b3e128bc745c0d25f56",
+                {
+                    center: [34.047776, -118.25401149999999],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 10,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_9350590ba9f5f3185c0843442ecdba93 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_9350590ba9f5f3185c0843442ecdba93.addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+            var marker_5b1baf5576942a94c6bd36327d3fab9d = L.marker(
+                [34.0483, -118.2631],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_5fd79154dd8f687061761aa19cccafea = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_53a5d47db8ebcfe09b53a9a1fbf7a6fd = $(`<div id="html_53a5d47db8ebcfe09b53a9a1fbf7a6fd" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-02, Crime: SHOPLIFTING - PETTY THEFT ($950 & UNDER)</div>`)[0];
+                popup_5fd79154dd8f687061761aa19cccafea.setContent(html_53a5d47db8ebcfe09b53a9a1fbf7a6fd);
+            
+        
+
+        marker_5b1baf5576942a94c6bd36327d3fab9d.bindPopup(popup_5fd79154dd8f687061761aa19cccafea)
+        ;
+
+        
+    
+    
+            var marker_f66a89572ca4ee9a1aa1fdc53664371c = L.marker(
+                [34.0677, -118.2398],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_f8e94c2d45f9bd5cd12fef763e23f2d2 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_fc4c8b02e1f2b684c068413d80dbea69 = $(`<div id="html_fc4c8b02e1f2b684c068413d80dbea69" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-04, Crime: THEFT-GRAND ($950.01 & OVER)EXCPT,GUNS,FOWL,LIVESTK,PROD</div>`)[0];
+                popup_f8e94c2d45f9bd5cd12fef763e23f2d2.setContent(html_fc4c8b02e1f2b684c068413d80dbea69);
+            
+        
+
+        marker_f66a89572ca4ee9a1aa1fdc53664371c.bindPopup(popup_f8e94c2d45f9bd5cd12fef763e23f2d2)
+        ;
+
+        
+    
+    
+            var marker_00ecec6f2a929aa2a2bbbe78ef66abeb = L.marker(
+                [34.0452, -118.2569],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_4c68453cb2946564aea80e06f4db78c0 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b9f1ad28920610a744778dca62ef76e4 = $(`<div id="html_b9f1ad28920610a744778dca62ef76e4" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-05, Crime: THEFT-GRAND ($950.01 & OVER)EXCPT,GUNS,FOWL,LIVESTK,PROD</div>`)[0];
+                popup_4c68453cb2946564aea80e06f4db78c0.setContent(html_b9f1ad28920610a744778dca62ef76e4);
+            
+        
+
+        marker_00ecec6f2a929aa2a2bbbe78ef66abeb.bindPopup(popup_4c68453cb2946564aea80e06f4db78c0)
+        ;
+
+        
+    
+    
+            var marker_ff66457fa26c9f1e0110cbe783c456b4 = L.marker(
+                [34.0515, -118.2424],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_436aaf82f239418de5364333317fb2c7 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_10561056319b8516d2aee9d6546d69d2 = $(`<div id="html_10561056319b8516d2aee9d6546d69d2" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-08, Crime: SHOPLIFTING - PETTY THEFT ($950 & UNDER)</div>`)[0];
+                popup_436aaf82f239418de5364333317fb2c7.setContent(html_10561056319b8516d2aee9d6546d69d2);
+            
+        
+
+        marker_ff66457fa26c9f1e0110cbe783c456b4.bindPopup(popup_436aaf82f239418de5364333317fb2c7)
+        ;
+
+        
+    
+    
+            var marker_8e6b53011c342d45347a4d687c3c31f8 = L.marker(
+                [34.048, -118.2577],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_adbf89e4001ec71d1ac560532cbc26c5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2205c2a95070a4f9e2570a1bbf4bce1c = $(`<div id="html_2205c2a95070a4f9e2570a1bbf4bce1c" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-14, Crime: THEFT-GRAND ($950.01 & OVER)EXCPT,GUNS,FOWL,LIVESTK,PROD</div>`)[0];
+                popup_adbf89e4001ec71d1ac560532cbc26c5.setContent(html_2205c2a95070a4f9e2570a1bbf4bce1c);
+            
+        
+
+        marker_8e6b53011c342d45347a4d687c3c31f8.bindPopup(popup_adbf89e4001ec71d1ac560532cbc26c5)
+        ;
+
+        
+    
+    
+            var marker_5b5b91aa77c9ae2f33dfdaea3ec4d18a = L.marker(
+                [34.048, -118.2577],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_a162a7653812d05acb4871acd2212388 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_bae2d4e0cbd0a72e9b2a754b3982ff81 = $(`<div id="html_bae2d4e0cbd0a72e9b2a754b3982ff81" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-15, Crime: SHOPLIFTING - PETTY THEFT ($950 & UNDER)</div>`)[0];
+                popup_a162a7653812d05acb4871acd2212388.setContent(html_bae2d4e0cbd0a72e9b2a754b3982ff81);
+            
+        
+
+        marker_5b5b91aa77c9ae2f33dfdaea3ec4d18a.bindPopup(popup_a162a7653812d05acb4871acd2212388)
+        ;
+
+        
+    
+    
+            var marker_55e2e05eff6e2247330ebcda6eb4fde5 = L.marker(
+                [34.048, -118.2577],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_5035b408af123a883d413d04aa48d35c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_47d918e97f7ef5476609b1401d2e6907 = $(`<div id="html_47d918e97f7ef5476609b1401d2e6907" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-29, Crime: SHOPLIFTING - PETTY THEFT ($950 & UNDER)</div>`)[0];
+                popup_5035b408af123a883d413d04aa48d35c.setContent(html_47d918e97f7ef5476609b1401d2e6907);
+            
+        
+
+        marker_55e2e05eff6e2247330ebcda6eb4fde5.bindPopup(popup_5035b408af123a883d413d04aa48d35c)
+        ;
+
+        
+    
+    
+            var marker_da3dcab54b08bf361d9bf7442f25d5c1 = L.marker(
+                [34.0463, -118.2515],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_af1ba486e2ebbd0a533b3a0343ffa975 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_85e546b08e0dd524e0ae26bce1b6cd3d = $(`<div id="html_85e546b08e0dd524e0ae26bce1b6cd3d" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-01, Crime: THEFT, PERSON</div>`)[0];
+                popup_af1ba486e2ebbd0a533b3a0343ffa975.setContent(html_85e546b08e0dd524e0ae26bce1b6cd3d);
+            
+        
+
+        marker_da3dcab54b08bf361d9bf7442f25d5c1.bindPopup(popup_af1ba486e2ebbd0a533b3a0343ffa975)
+        ;
+
+        
+    
+    
+            var marker_608cc2d81f413d28fa656364d47e4537 = L.marker(
+                [34.0487, -118.2627],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_d3843b96e15afcef980c3ffc602eca42 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4d65421eb86ae22ed43c244c5f7997d2 = $(`<div id="html_4d65421eb86ae22ed43c244c5f7997d2" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-01, Crime: THEFT PLAIN - PETTY ($950 & UNDER)</div>`)[0];
+                popup_d3843b96e15afcef980c3ffc602eca42.setContent(html_4d65421eb86ae22ed43c244c5f7997d2);
+            
+        
+
+        marker_608cc2d81f413d28fa656364d47e4537.bindPopup(popup_d3843b96e15afcef980c3ffc602eca42)
+        ;
+
+        
+    
+    
+            var marker_43a7a805ed3afb84fbf081aadc53e8af = L.marker(
+                [34.0462, -118.2585],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_9077ae3a38c2c0e5d15e7fc158c76870 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d587352de80021b017bae192cbab9721 = $(`<div id="html_d587352de80021b017bae192cbab9721" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-01, Crime: THEFT-GRAND ($950.01 & OVER)EXCPT,GUNS,FOWL,LIVESTK,PROD</div>`)[0];
+                popup_9077ae3a38c2c0e5d15e7fc158c76870.setContent(html_d587352de80021b017bae192cbab9721);
+            
+        
+
+        marker_43a7a805ed3afb84fbf081aadc53e8af.bindPopup(popup_9077ae3a38c2c0e5d15e7fc158c76870)
+        ;
+
+        
+    
+    
+            var marker_4a97da911596f1be43fb2a8718a4fd3e = L.marker(
+                [34.0421, -118.2469],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_9f9ede0ea0d65a140ae90ad2ab72ed96 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_789096da1df86e5f65122d54e1325733 = $(`<div id="html_789096da1df86e5f65122d54e1325733" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-01, Crime: THEFT PLAIN - PETTY ($950 & UNDER)</div>`)[0];
+                popup_9f9ede0ea0d65a140ae90ad2ab72ed96.setContent(html_789096da1df86e5f65122d54e1325733);
+            
+        
+
+        marker_4a97da911596f1be43fb2a8718a4fd3e.bindPopup(popup_9f9ede0ea0d65a140ae90ad2ab72ed96)
+        ;
+
+        
+    
+    
+            var marker_fa349bb39ca0905a74c574dd8fcaeb51 = L.marker(
+                [34.0481, -118.2507],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_c0afcfcd824cb3ac018055d97d667bc1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9ecf9a2a50f86502bbc233719cc55188 = $(`<div id="html_9ecf9a2a50f86502bbc233719cc55188" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-01, Crime: THEFT-GRAND ($950.01 & OVER)EXCPT,GUNS,FOWL,LIVESTK,PROD</div>`)[0];
+                popup_c0afcfcd824cb3ac018055d97d667bc1.setContent(html_9ecf9a2a50f86502bbc233719cc55188);
+            
+        
+
+        marker_fa349bb39ca0905a74c574dd8fcaeb51.bindPopup(popup_c0afcfcd824cb3ac018055d97d667bc1)
+        ;
+
+        
+    
+    
+            var marker_bf28fe4c0bba5813833cbf6b54260891 = L.marker(
+                [34.048, -118.2577],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_f81f42399c5c4c8167af8cf9e6c0061f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a50abfb051a8626af4b9a573af11906e = $(`<div id="html_a50abfb051a8626af4b9a573af11906e" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-02, Crime: SHOPLIFTING - PETTY THEFT ($950 & UNDER)</div>`)[0];
+                popup_f81f42399c5c4c8167af8cf9e6c0061f.setContent(html_a50abfb051a8626af4b9a573af11906e);
+            
+        
+
+        marker_bf28fe4c0bba5813833cbf6b54260891.bindPopup(popup_f81f42399c5c4c8167af8cf9e6c0061f)
+        ;
+
+        
+    
+    
+            var marker_05007315d4d05edb83ffe6dc9f3e0a13 = L.marker(
+                [34.0487, -118.2588],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_316961c28842770bc1942c9019a2bd76 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3c9596f320e49e8e16328aeb748cf0fb = $(`<div id="html_3c9596f320e49e8e16328aeb748cf0fb" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-02, Crime: SHOPLIFTING - PETTY THEFT ($950 & UNDER)</div>`)[0];
+                popup_316961c28842770bc1942c9019a2bd76.setContent(html_3c9596f320e49e8e16328aeb748cf0fb);
+            
+        
+
+        marker_05007315d4d05edb83ffe6dc9f3e0a13.bindPopup(popup_316961c28842770bc1942c9019a2bd76)
+        ;
+
+        
+    
+    
+            var marker_60a2f4969e5574a704ae0dc1fdd8b5d5 = L.marker(
+                [34.053, -118.2513],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_39058eef05eef0431ebb3653b0bb129c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e0ed8714e73b7e94a1ce253edfa6953f = $(`<div id="html_e0ed8714e73b7e94a1ce253edfa6953f" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-02, Crime: THEFT PLAIN - PETTY ($950 & UNDER)</div>`)[0];
+                popup_39058eef05eef0431ebb3653b0bb129c.setContent(html_e0ed8714e73b7e94a1ce253edfa6953f);
+            
+        
+
+        marker_60a2f4969e5574a704ae0dc1fdd8b5d5.bindPopup(popup_39058eef05eef0431ebb3653b0bb129c)
+        ;
+
+        
+    
+    
+            var marker_3195ebb2c2476804c3297f3e090c8e30 = L.marker(
+                [34.048, -118.2577],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_ce33498a6a9ab8dd8f135cb0c164ba78 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_70664d63a71be9b907a73c35d327f0dd = $(`<div id="html_70664d63a71be9b907a73c35d327f0dd" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-01, Crime: SHOPLIFTING - PETTY THEFT ($950 & UNDER)</div>`)[0];
+                popup_ce33498a6a9ab8dd8f135cb0c164ba78.setContent(html_70664d63a71be9b907a73c35d327f0dd);
+            
+        
+
+        marker_3195ebb2c2476804c3297f3e090c8e30.bindPopup(popup_ce33498a6a9ab8dd8f135cb0c164ba78)
+        ;
+
+        
+    
+    
+            var marker_62562df3cf12bc8030f8fc7e9949ffd9 = L.marker(
+                [34.0446, -118.249],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_6d1640e0a9907a7c2b028e338f21d3c2 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c813887c1ab62613280b05003f7fd808 = $(`<div id="html_c813887c1ab62613280b05003f7fd808" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-02, Crime: THEFT PLAIN - PETTY ($950 & UNDER)</div>`)[0];
+                popup_6d1640e0a9907a7c2b028e338f21d3c2.setContent(html_c813887c1ab62613280b05003f7fd808);
+            
+        
+
+        marker_62562df3cf12bc8030f8fc7e9949ffd9.bindPopup(popup_6d1640e0a9907a7c2b028e338f21d3c2)
+        ;
+
+        
+    
+    
+            var marker_7e208879d4ed49207f664a248e7b9de8 = L.marker(
+                [34.0515, -118.2424],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_f2c7677cc04f0678639a6600381c247c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_97746c7586f466a006af58cdb00278b1 = $(`<div id="html_97746c7586f466a006af58cdb00278b1" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-03, Crime: THEFT PLAIN - PETTY ($950 & UNDER)</div>`)[0];
+                popup_f2c7677cc04f0678639a6600381c247c.setContent(html_97746c7586f466a006af58cdb00278b1);
+            
+        
+
+        marker_7e208879d4ed49207f664a248e7b9de8.bindPopup(popup_f2c7677cc04f0678639a6600381c247c)
+        ;
+
+        
+    
+    
+            var marker_72e4a29850f809f988ccaa3e427a1e90 = L.marker(
+                [34.048, -118.2577],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_68320774ce30acf0435295cd5d9d6302 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2858992a6bab1a0437a383f29d9b9793 = $(`<div id="html_2858992a6bab1a0437a383f29d9b9793" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-03, Crime: SHOPLIFTING - PETTY THEFT ($950 & UNDER)</div>`)[0];
+                popup_68320774ce30acf0435295cd5d9d6302.setContent(html_2858992a6bab1a0437a383f29d9b9793);
+            
+        
+
+        marker_72e4a29850f809f988ccaa3e427a1e90.bindPopup(popup_68320774ce30acf0435295cd5d9d6302)
+        ;
+
+        
+    
+    
+            var marker_57aa80f38ecc19f5d5b056e41a00d92f = L.marker(
+                [34.048, -118.2577],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_15608f7830664db94f3a73e97fdd0b4d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_57bd15d0339bb9883ffb39e7d8c10d7b = $(`<div id="html_57bd15d0339bb9883ffb39e7d8c10d7b" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-03, Crime: SHOPLIFTING - PETTY THEFT ($950 & UNDER)</div>`)[0];
+                popup_15608f7830664db94f3a73e97fdd0b4d.setContent(html_57bd15d0339bb9883ffb39e7d8c10d7b);
+            
+        
+
+        marker_57aa80f38ecc19f5d5b056e41a00d92f.bindPopup(popup_15608f7830664db94f3a73e97fdd0b4d)
+        ;
+
+        
+    
+    
+            var marker_987a6b9bdba58b153550610d36f875fb = L.marker(
+                [34.0473, -118.2566],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_313713afdb3ab84379ce04fd96eb11ff = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a0612ead5a53d5ec76ae802da5999f1a = $(`<div id="html_a0612ead5a53d5ec76ae802da5999f1a" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-03, Crime: THEFT FROM MOTOR VEHICLE - PETTY ($950 & UNDER)</div>`)[0];
+                popup_313713afdb3ab84379ce04fd96eb11ff.setContent(html_a0612ead5a53d5ec76ae802da5999f1a);
+            
+        
+
+        marker_987a6b9bdba58b153550610d36f875fb.bindPopup(popup_313713afdb3ab84379ce04fd96eb11ff)
+        ;
+
+        
+    
+    
+            var marker_87d12d037f909006bfa62f529afa997c = L.marker(
+                [34.0471, -118.2474],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_47a43dbeae589eac2e21977ed70cd2dc = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5ae40e911f2db512c5c1f78f4766f967 = $(`<div id="html_5ae40e911f2db512c5c1f78f4766f967" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-03, Crime: THEFT-GRAND ($950.01 & OVER)EXCPT,GUNS,FOWL,LIVESTK,PROD</div>`)[0];
+                popup_47a43dbeae589eac2e21977ed70cd2dc.setContent(html_5ae40e911f2db512c5c1f78f4766f967);
+            
+        
+
+        marker_87d12d037f909006bfa62f529afa997c.bindPopup(popup_47a43dbeae589eac2e21977ed70cd2dc)
+        ;
+
+        
+    
+    
+            var marker_ab0a3a66405dbe7060c4fd03af28738f = L.marker(
+                [34.051, -118.2445],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_4eacfab6726c0e3cf9ed55318f62ef9a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3e34f11593336e2645b76b0f8e63a6b8 = $(`<div id="html_3e34f11593336e2645b76b0f8e63a6b8" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-03, Crime: THEFT PLAIN - PETTY ($950 & UNDER)</div>`)[0];
+                popup_4eacfab6726c0e3cf9ed55318f62ef9a.setContent(html_3e34f11593336e2645b76b0f8e63a6b8);
+            
+        
+
+        marker_ab0a3a66405dbe7060c4fd03af28738f.bindPopup(popup_4eacfab6726c0e3cf9ed55318f62ef9a)
+        ;
+
+        
+    
+    
+            var marker_84451d3b20f4dc1d17e940d9879334c1 = L.marker(
+                [34.0483, -118.2631],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_45b04973b9a35266a544eaa3f67ddfde = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_058f8c889d39385425b4c70b25ff1006 = $(`<div id="html_058f8c889d39385425b4c70b25ff1006" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-04, Crime: SHOPLIFTING - PETTY THEFT ($950 & UNDER)</div>`)[0];
+                popup_45b04973b9a35266a544eaa3f67ddfde.setContent(html_058f8c889d39385425b4c70b25ff1006);
+            
+        
+
+        marker_84451d3b20f4dc1d17e940d9879334c1.bindPopup(popup_45b04973b9a35266a544eaa3f67ddfde)
+        ;
+
+        
+    
+    
+            var marker_cd59be9ae694f67b90c4c04fb0e06592 = L.marker(
+                [34.0563, -118.2374],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_8495f2ba2ccc51b3f43db5ab15df8ab6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_fe0a323564429391af43a32b791b00dc = $(`<div id="html_fe0a323564429391af43a32b791b00dc" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-02, Crime: THEFT PLAIN - PETTY ($950 & UNDER)</div>`)[0];
+                popup_8495f2ba2ccc51b3f43db5ab15df8ab6.setContent(html_fe0a323564429391af43a32b791b00dc);
+            
+        
+
+        marker_cd59be9ae694f67b90c4c04fb0e06592.bindPopup(popup_8495f2ba2ccc51b3f43db5ab15df8ab6)
+        ;
+
+        
+    
+    
+            var marker_03dc9d38fb033d55c90c527f9d37462d = L.marker(
+                [34.048, -118.2577],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_9da6ce5eeadba1546bf6c7818427c087 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3ad9a4d2bf4261a9be386742b33a784f = $(`<div id="html_3ad9a4d2bf4261a9be386742b33a784f" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-04, Crime: SHOPLIFTING - PETTY THEFT ($950 & UNDER)</div>`)[0];
+                popup_9da6ce5eeadba1546bf6c7818427c087.setContent(html_3ad9a4d2bf4261a9be386742b33a784f);
+            
+        
+
+        marker_03dc9d38fb033d55c90c527f9d37462d.bindPopup(popup_9da6ce5eeadba1546bf6c7818427c087)
+        ;
+
+        
+    
+    
+            var marker_e0a6208afad926f0775a341f3d9e4da6 = L.marker(
+                [34.0437, -118.2455],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_0ccaa80877b2a9084b6828935014114e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_bb8c22f1c0e78668060091897b243537 = $(`<div id="html_bb8c22f1c0e78668060091897b243537" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-04, Crime: THEFT PLAIN - PETTY ($950 & UNDER)</div>`)[0];
+                popup_0ccaa80877b2a9084b6828935014114e.setContent(html_bb8c22f1c0e78668060091897b243537);
+            
+        
+
+        marker_e0a6208afad926f0775a341f3d9e4da6.bindPopup(popup_0ccaa80877b2a9084b6828935014114e)
+        ;
+
+        
+    
+    
+            var marker_71d8b82f982668ad0e85d8019f69d99b = L.marker(
+                [34.048, -118.2577],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_44ea23899083b88cd429df95d0526382 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4b81a66ab7051ab4dfbe780fbdf9f607 = $(`<div id="html_4b81a66ab7051ab4dfbe780fbdf9f607" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-04, Crime: SHOPLIFTING - PETTY THEFT ($950 & UNDER)</div>`)[0];
+                popup_44ea23899083b88cd429df95d0526382.setContent(html_4b81a66ab7051ab4dfbe780fbdf9f607);
+            
+        
+
+        marker_71d8b82f982668ad0e85d8019f69d99b.bindPopup(popup_44ea23899083b88cd429df95d0526382)
+        ;
+
+        
+    
+    
+            var marker_964fe554d0a44f6526eb3b7143a9fec3 = L.marker(
+                [34.046, -118.2509],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_a1fa5e62e163db397c2391f6e42a2798 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_de5a15dbebbcab94e91b923bb079cf40 = $(`<div id="html_de5a15dbebbcab94e91b923bb079cf40" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-03, Crime: THEFT PLAIN - PETTY ($950 & UNDER)</div>`)[0];
+                popup_a1fa5e62e163db397c2391f6e42a2798.setContent(html_de5a15dbebbcab94e91b923bb079cf40);
+            
+        
+
+        marker_964fe554d0a44f6526eb3b7143a9fec3.bindPopup(popup_a1fa5e62e163db397c2391f6e42a2798)
+        ;
+
+        
+    
+    
+            var marker_d8d205e691973967b3c193f80d41d2ad = L.marker(
+                [34.0652, -118.2451],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_5ef8a1436766882451a97721f83663a7 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c0dbd733366491b0fe3c4f7f25c1766f = $(`<div id="html_c0dbd733366491b0fe3c4f7f25c1766f" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-04, Crime: THEFT PLAIN - PETTY ($950 & UNDER)</div>`)[0];
+                popup_5ef8a1436766882451a97721f83663a7.setContent(html_c0dbd733366491b0fe3c4f7f25c1766f);
+            
+        
+
+        marker_d8d205e691973967b3c193f80d41d2ad.bindPopup(popup_5ef8a1436766882451a97721f83663a7)
+        ;
+
+        
+    
+    
+            var marker_4964fab00242fe9ecb65fd978d5058a3 = L.marker(
+                [34.0713, -118.2291],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_fa2159a25af64ac04cc6b6101c88200f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5519f0e3c254fb3f0691949ccbe3ce5d = $(`<div id="html_5519f0e3c254fb3f0691949ccbe3ce5d" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-03, Crime: THEFT FROM MOTOR VEHICLE - PETTY ($950 & UNDER)</div>`)[0];
+                popup_fa2159a25af64ac04cc6b6101c88200f.setContent(html_5519f0e3c254fb3f0691949ccbe3ce5d);
+            
+        
+
+        marker_4964fab00242fe9ecb65fd978d5058a3.bindPopup(popup_fa2159a25af64ac04cc6b6101c88200f)
+        ;
+
+        
+    
+    
+            var marker_f20918c32f8a1c54de5e297feaa2c3e1 = L.marker(
+                [34.0467, -118.252],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_0255524a8e3968b63732f7c41a008aba = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7ab8ddd60850b7b400429198626213fa = $(`<div id="html_7ab8ddd60850b7b400429198626213fa" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-01, Crime: THEFT PLAIN - PETTY ($950 & UNDER)</div>`)[0];
+                popup_0255524a8e3968b63732f7c41a008aba.setContent(html_7ab8ddd60850b7b400429198626213fa);
+            
+        
+
+        marker_f20918c32f8a1c54de5e297feaa2c3e1.bindPopup(popup_0255524a8e3968b63732f7c41a008aba)
+        ;
+
+        
+    
+    
+            var marker_2a8180868e505a90fd64044745b47346 = L.marker(
+                [34.0446, -118.245],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_2de9df5ad3675ffca2d1366a9d67bd4c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c8a54b0be2933d846b53772d4da28e02 = $(`<div id="html_c8a54b0be2933d846b53772d4da28e02" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-04, Crime: THEFT-GRAND ($950.01 & OVER)EXCPT,GUNS,FOWL,LIVESTK,PROD</div>`)[0];
+                popup_2de9df5ad3675ffca2d1366a9d67bd4c.setContent(html_c8a54b0be2933d846b53772d4da28e02);
+            
+        
+
+        marker_2a8180868e505a90fd64044745b47346.bindPopup(popup_2de9df5ad3675ffca2d1366a9d67bd4c)
+        ;
+
+        
+    
+    
+            var marker_ec4e5305f89522f16baf1dd3d5d502fe = L.marker(
+                [34.0433, -118.2504],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_1b565ba564d12b90a783725b852ba5bf = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9999aaf0c51a287a8e2970f7ca7892c1 = $(`<div id="html_9999aaf0c51a287a8e2970f7ca7892c1" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-03, Crime: THEFT FROM MOTOR VEHICLE - PETTY ($950 & UNDER)</div>`)[0];
+                popup_1b565ba564d12b90a783725b852ba5bf.setContent(html_9999aaf0c51a287a8e2970f7ca7892c1);
+            
+        
+
+        marker_ec4e5305f89522f16baf1dd3d5d502fe.bindPopup(popup_1b565ba564d12b90a783725b852ba5bf)
+        ;
+
+        
+    
+    
+            var marker_213d9f67a4e325fc5c370c1e38c569f9 = L.marker(
+                [34.046, -118.2509],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_f217cb46951cd9a540cd95dc896bd206 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_679b4e87b2c77fe130d117b2c3697e7e = $(`<div id="html_679b4e87b2c77fe130d117b2c3697e7e" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-05, Crime: THEFT, PERSON</div>`)[0];
+                popup_f217cb46951cd9a540cd95dc896bd206.setContent(html_679b4e87b2c77fe130d117b2c3697e7e);
+            
+        
+
+        marker_213d9f67a4e325fc5c370c1e38c569f9.bindPopup(popup_f217cb46951cd9a540cd95dc896bd206)
+        ;
+
+        
+    
+    
+            var marker_bb525cb980666d6c2b13f27f98ab0d19 = L.marker(
+                [34.0503, -118.2504],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_149b6367e8b7de94fb7d7eba14aa9353 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_bea06a0a12321bd60e1cb33ee787e58e = $(`<div id="html_bea06a0a12321bd60e1cb33ee787e58e" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-05, Crime: THEFT FROM MOTOR VEHICLE - ATTEMPT</div>`)[0];
+                popup_149b6367e8b7de94fb7d7eba14aa9353.setContent(html_bea06a0a12321bd60e1cb33ee787e58e);
+            
+        
+
+        marker_bb525cb980666d6c2b13f27f98ab0d19.bindPopup(popup_149b6367e8b7de94fb7d7eba14aa9353)
+        ;
+
+        
+    
+    
+            var marker_3efb71f25250982cd4c35e11fa1cbc0e = L.marker(
+                [34.0452, -118.2534],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_a95784d5197394bba260dea82e395c75 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b0cf0173a6e360cefc32e3935b95d906 = $(`<div id="html_b0cf0173a6e360cefc32e3935b95d906" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-06, Crime: THEFT PLAIN - PETTY ($950 & UNDER)</div>`)[0];
+                popup_a95784d5197394bba260dea82e395c75.setContent(html_b0cf0173a6e360cefc32e3935b95d906);
+            
+        
+
+        marker_3efb71f25250982cd4c35e11fa1cbc0e.bindPopup(popup_a95784d5197394bba260dea82e395c75)
+        ;
+
+        
+    
+    
+            var marker_9efa3dded97a950d56e1bbf935e16b68 = L.marker(
+                [34.046, -118.2509],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_c45a2c65619f39e5f6c3229fd61a5ac6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3c5c26cc449effdbbaab3e6cd8aa8dc1 = $(`<div id="html_3c5c26cc449effdbbaab3e6cd8aa8dc1" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-05, Crime: THEFT FROM MOTOR VEHICLE - PETTY ($950 & UNDER)</div>`)[0];
+                popup_c45a2c65619f39e5f6c3229fd61a5ac6.setContent(html_3c5c26cc449effdbbaab3e6cd8aa8dc1);
+            
+        
+
+        marker_9efa3dded97a950d56e1bbf935e16b68.bindPopup(popup_c45a2c65619f39e5f6c3229fd61a5ac6)
+        ;
+
+        
+    
+    
+            var marker_ba02ff0e31cf5785571b263541f20070 = L.marker(
+                [34.0487, -118.2588],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_7378d8ccf7795135e2e917cafc5b8e1f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e3bc7d30234a57d296ed7fb103f3ad16 = $(`<div id="html_e3bc7d30234a57d296ed7fb103f3ad16" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-06, Crime: SHOPLIFTING - PETTY THEFT ($950 & UNDER)</div>`)[0];
+                popup_7378d8ccf7795135e2e917cafc5b8e1f.setContent(html_e3bc7d30234a57d296ed7fb103f3ad16);
+            
+        
+
+        marker_ba02ff0e31cf5785571b263541f20070.bindPopup(popup_7378d8ccf7795135e2e917cafc5b8e1f)
+        ;
+
+        
+    
+    
+            var marker_ce3181dcdd3247b04eda6ad2fad4cf90 = L.marker(
+                [34.0462, -118.2585],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_1e6218abee04cf0b88ef75794eef0fed = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4fbe28e52dce141249df28ca97a18570 = $(`<div id="html_4fbe28e52dce141249df28ca97a18570" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-03, Crime: THEFT OF IDENTITY</div>`)[0];
+                popup_1e6218abee04cf0b88ef75794eef0fed.setContent(html_4fbe28e52dce141249df28ca97a18570);
+            
+        
+
+        marker_ce3181dcdd3247b04eda6ad2fad4cf90.bindPopup(popup_1e6218abee04cf0b88ef75794eef0fed)
+        ;
+
+        
+    
+    
+            var marker_38f7f4df16aff28cdb99cdb8c4082d94 = L.marker(
+                [34.0329, -118.2632],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_985d5e242460d57dc6b8453a8637e00b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_80137412c20cbc3e8df0f17cef674b21 = $(`<div id="html_80137412c20cbc3e8df0f17cef674b21" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-06, Crime: BUNCO, GRAND THEFT</div>`)[0];
+                popup_985d5e242460d57dc6b8453a8637e00b.setContent(html_80137412c20cbc3e8df0f17cef674b21);
+            
+        
+
+        marker_38f7f4df16aff28cdb99cdb8c4082d94.bindPopup(popup_985d5e242460d57dc6b8453a8637e00b)
+        ;
+
+        
+    
+    
+            var marker_2f8f58164dba4d4044fc916168add25a = L.marker(
+                [34.0483, -118.2631],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_68bca0d873042e5e99b474a49db5ff2c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b34959e005e06369f87afd6002608954 = $(`<div id="html_b34959e005e06369f87afd6002608954" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-06, Crime: THEFT PLAIN - PETTY ($950 & UNDER)</div>`)[0];
+                popup_68bca0d873042e5e99b474a49db5ff2c.setContent(html_b34959e005e06369f87afd6002608954);
+            
+        
+
+        marker_2f8f58164dba4d4044fc916168add25a.bindPopup(popup_68bca0d873042e5e99b474a49db5ff2c)
+        ;
+
+        
+    
+    
+            var marker_bf0148305bae9d4d71d5638a6613557c = L.marker(
+                [34.051, -118.248],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_58c454ee0a6ca6ce7438ad8ac5fa489c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_19efca5327b390de9ce84b4ff5e1afc9 = $(`<div id="html_19efca5327b390de9ce84b4ff5e1afc9" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-02, Crime: THEFT PLAIN - PETTY ($950 & UNDER)</div>`)[0];
+                popup_58c454ee0a6ca6ce7438ad8ac5fa489c.setContent(html_19efca5327b390de9ce84b4ff5e1afc9);
+            
+        
+
+        marker_bf0148305bae9d4d71d5638a6613557c.bindPopup(popup_58c454ee0a6ca6ce7438ad8ac5fa489c)
+        ;
+
+        
+    
+    
+            var marker_ab1f113e6b960a537210d58d151ec1ca = L.marker(
+                [34.0491, -118.2558],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_e4f2ea38cb5bf12e13ab3b7c771c4e54 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_feb90bad11b21e9c4c98e286c53e7258 = $(`<div id="html_feb90bad11b21e9c4c98e286c53e7258" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-03, Crime: THEFT-GRAND ($950.01 & OVER)EXCPT,GUNS,FOWL,LIVESTK,PROD</div>`)[0];
+                popup_e4f2ea38cb5bf12e13ab3b7c771c4e54.setContent(html_feb90bad11b21e9c4c98e286c53e7258);
+            
+        
+
+        marker_ab1f113e6b960a537210d58d151ec1ca.bindPopup(popup_e4f2ea38cb5bf12e13ab3b7c771c4e54)
+        ;
+
+        
+    
+    
+            var marker_cb72a399ed150f807c1560bd0a2c30b5 = L.marker(
+                [34.0498, -118.24],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_5ee91ab76338aff1c2b2cb1c88e1dfa4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2b17ae9d845b038051b217e26f64d413 = $(`<div id="html_2b17ae9d845b038051b217e26f64d413" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-06, Crime: THEFT PLAIN - PETTY ($950 & UNDER)</div>`)[0];
+                popup_5ee91ab76338aff1c2b2cb1c88e1dfa4.setContent(html_2b17ae9d845b038051b217e26f64d413);
+            
+        
+
+        marker_cb72a399ed150f807c1560bd0a2c30b5.bindPopup(popup_5ee91ab76338aff1c2b2cb1c88e1dfa4)
+        ;
+
+        
+    
+    
+            var marker_dd94f3a2f05b2d50448b3f70365509cd = L.marker(
+                [34.0551, -118.2323],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_93d4715833d02e0c03d9dc14c7877862 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a3fd0baf4aca43d86d846eead3237a84 = $(`<div id="html_a3fd0baf4aca43d86d846eead3237a84" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-07, Crime: SHOPLIFTING - PETTY THEFT ($950 & UNDER)</div>`)[0];
+                popup_93d4715833d02e0c03d9dc14c7877862.setContent(html_a3fd0baf4aca43d86d846eead3237a84);
+            
+        
+
+        marker_dd94f3a2f05b2d50448b3f70365509cd.bindPopup(popup_93d4715833d02e0c03d9dc14c7877862)
+        ;
+
+        
+    
+    
+            var marker_4fb1a0431d51acc527a1f3f7c1dc4ad8 = L.marker(
+                [34.0457, -118.2665],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_5d0ef5e71b4e6fd86d2c2e6585a1d266 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5f232f374c662f4c8bd1bd558ecb0b12 = $(`<div id="html_5f232f374c662f4c8bd1bd558ecb0b12" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-08, Crime: THEFT, PERSON</div>`)[0];
+                popup_5d0ef5e71b4e6fd86d2c2e6585a1d266.setContent(html_5f232f374c662f4c8bd1bd558ecb0b12);
+            
+        
+
+        marker_4fb1a0431d51acc527a1f3f7c1dc4ad8.bindPopup(popup_5d0ef5e71b4e6fd86d2c2e6585a1d266)
+        ;
+
+        
+    
+    
+            var marker_3f5f2a0b65f94b3a36734b0db53add7f = L.marker(
+                [34.048, -118.2577],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_63b207b188d8ec0afecb17933c789edd = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4195e712631b1849ddb6227f577bd7d6 = $(`<div id="html_4195e712631b1849ddb6227f577bd7d6" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-07, Crime: SHOPLIFTING - PETTY THEFT ($950 & UNDER)</div>`)[0];
+                popup_63b207b188d8ec0afecb17933c789edd.setContent(html_4195e712631b1849ddb6227f577bd7d6);
+            
+        
+
+        marker_3f5f2a0b65f94b3a36734b0db53add7f.bindPopup(popup_63b207b188d8ec0afecb17933c789edd)
+        ;
+
+        
+    
+    
+            var marker_33824f31400662d3afde187cf367c267 = L.marker(
+                [34.0453, -118.2443],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_7905906f2af814bb754ffd20d0e28e20 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9d8ff0c5f4c0266b0ed6e47393a11f34 = $(`<div id="html_9d8ff0c5f4c0266b0ed6e47393a11f34" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-06, Crime: THEFT PLAIN - PETTY ($950 & UNDER)</div>`)[0];
+                popup_7905906f2af814bb754ffd20d0e28e20.setContent(html_9d8ff0c5f4c0266b0ed6e47393a11f34);
+            
+        
+
+        marker_33824f31400662d3afde187cf367c267.bindPopup(popup_7905906f2af814bb754ffd20d0e28e20)
+        ;
+
+        
+    
+    
+            var marker_1fdacc6c059a918e10ca17e68f2f68b8 = L.marker(
+                [34.0389, -118.2643],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_2ac9db9135c6e0f62b191807600bd789 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_52dfb1d2d73d8383e27af26400fd5a92 = $(`<div id="html_52dfb1d2d73d8383e27af26400fd5a92" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-02, Crime: THEFT-GRAND ($950.01 & OVER)EXCPT,GUNS,FOWL,LIVESTK,PROD</div>`)[0];
+                popup_2ac9db9135c6e0f62b191807600bd789.setContent(html_52dfb1d2d73d8383e27af26400fd5a92);
+            
+        
+
+        marker_1fdacc6c059a918e10ca17e68f2f68b8.bindPopup(popup_2ac9db9135c6e0f62b191807600bd789)
+        ;
+
+        
+    
+    
+            var marker_8810a7298e0b90bde8aaf33c22180850 = L.marker(
+                [34.0423, -118.2631],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_5ee46d8d8704dce07ccccb3b1811d858 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9d5f5368b023678feb1c5dea463a7177 = $(`<div id="html_9d5f5368b023678feb1c5dea463a7177" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-07, Crime: THEFT-GRAND ($950.01 & OVER)EXCPT,GUNS,FOWL,LIVESTK,PROD</div>`)[0];
+                popup_5ee46d8d8704dce07ccccb3b1811d858.setContent(html_9d5f5368b023678feb1c5dea463a7177);
+            
+        
+
+        marker_8810a7298e0b90bde8aaf33c22180850.bindPopup(popup_5ee46d8d8704dce07ccccb3b1811d858)
+        ;
+
+        
+    
+    
+            var marker_af93f3d60451a442cdeebfd0ab4a63a3 = L.marker(
+                [34.0436, -118.2354],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_da688de2954caff1410292318dd398f5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5a50c8be908b55a1fc5f06846877c420 = $(`<div id="html_5a50c8be908b55a1fc5f06846877c420" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-06, Crime: THEFT PLAIN - PETTY ($950 & UNDER)</div>`)[0];
+                popup_da688de2954caff1410292318dd398f5.setContent(html_5a50c8be908b55a1fc5f06846877c420);
+            
+        
+
+        marker_af93f3d60451a442cdeebfd0ab4a63a3.bindPopup(popup_da688de2954caff1410292318dd398f5)
+        ;
+
+        
+    
+    
+            var marker_5acbe00a5bf4cda39801b83e0cd33165 = L.marker(
+                [34.0458, -118.243],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_f55dee8e758207ed1301e34bbdb1a6de = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d634d1711ece1877322956863a6cf5bc = $(`<div id="html_d634d1711ece1877322956863a6cf5bc" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-06, Crime: THEFT PLAIN - PETTY ($950 & UNDER)</div>`)[0];
+                popup_f55dee8e758207ed1301e34bbdb1a6de.setContent(html_d634d1711ece1877322956863a6cf5bc);
+            
+        
+
+        marker_5acbe00a5bf4cda39801b83e0cd33165.bindPopup(popup_f55dee8e758207ed1301e34bbdb1a6de)
+        ;
+
+        
+    
+    
+            var marker_91b0e66ae2c8fc37b78c84d1f8f8668a = L.marker(
+                [34.0453, -118.2443],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_8e5dc49d26b1d7f53c050f2becc34f0b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9282ba1b33304854df8399ee4a97b669 = $(`<div id="html_9282ba1b33304854df8399ee4a97b669" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-08, Crime: THEFT PLAIN - PETTY ($950 & UNDER)</div>`)[0];
+                popup_8e5dc49d26b1d7f53c050f2becc34f0b.setContent(html_9282ba1b33304854df8399ee4a97b669);
+            
+        
+
+        marker_91b0e66ae2c8fc37b78c84d1f8f8668a.bindPopup(popup_8e5dc49d26b1d7f53c050f2becc34f0b)
+        ;
+
+        
+    
+    
+            var marker_1673c6a8ff547325b7f2ddb1cc4b53d7 = L.marker(
+                [34.0483, -118.2631],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_1656c81b9f5e28674c83f9443789a5dc = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f583b0698a4c6dc2508e079b9730913b = $(`<div id="html_f583b0698a4c6dc2508e079b9730913b" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-08, Crime: THEFT PLAIN - PETTY ($950 & UNDER)</div>`)[0];
+                popup_1656c81b9f5e28674c83f9443789a5dc.setContent(html_f583b0698a4c6dc2508e079b9730913b);
+            
+        
+
+        marker_1673c6a8ff547325b7f2ddb1cc4b53d7.bindPopup(popup_1656c81b9f5e28674c83f9443789a5dc)
+        ;
+
+        
+    
+    
+            var marker_5b504a78854e1065967d42d7ce79d4c6 = L.marker(
+                [34.0433, -118.2504],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_27b55a4a8a521d673a82b5d92a6dadd9 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d8ba7c9b9cdbbc4ccb23faedb461fb98 = $(`<div id="html_d8ba7c9b9cdbbc4ccb23faedb461fb98" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-06, Crime: THEFT-GRAND ($950.01 & OVER)EXCPT,GUNS,FOWL,LIVESTK,PROD</div>`)[0];
+                popup_27b55a4a8a521d673a82b5d92a6dadd9.setContent(html_d8ba7c9b9cdbbc4ccb23faedb461fb98);
+            
+        
+
+        marker_5b504a78854e1065967d42d7ce79d4c6.bindPopup(popup_27b55a4a8a521d673a82b5d92a6dadd9)
+        ;
+
+        
+    
+    
+            var marker_b80467dfb2f6ec9d3ffca2e2a9ece210 = L.marker(
+                [34.0462, -118.2585],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_95281c0b292f11fdb2a2ac8bf063694d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_fcba115fa6f917e770d6afbc3bf0c482 = $(`<div id="html_fcba115fa6f917e770d6afbc3bf0c482" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-07, Crime: BUNCO, GRAND THEFT</div>`)[0];
+                popup_95281c0b292f11fdb2a2ac8bf063694d.setContent(html_fcba115fa6f917e770d6afbc3bf0c482);
+            
+        
+
+        marker_b80467dfb2f6ec9d3ffca2e2a9ece210.bindPopup(popup_95281c0b292f11fdb2a2ac8bf063694d)
+        ;
+
+        
+    
+    
+            var marker_90e6ce48e25800d5757c005f5f4f419a = L.marker(
+                [34.0563, -118.2374],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_246a6373c73b6ac67391719e731c3796 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1425d9195d2f7240da17fd689ed3c735 = $(`<div id="html_1425d9195d2f7240da17fd689ed3c735" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-09, Crime: THEFT PLAIN - PETTY ($950 & UNDER)</div>`)[0];
+                popup_246a6373c73b6ac67391719e731c3796.setContent(html_1425d9195d2f7240da17fd689ed3c735);
+            
+        
+
+        marker_90e6ce48e25800d5757c005f5f4f419a.bindPopup(popup_246a6373c73b6ac67391719e731c3796)
+        ;
+
+        
+    
+    
+            var marker_391283ac5cd792d177a7630916f63267 = L.marker(
+                [34.0481, -118.2507],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_d81edb93291e5f96ebca811aa5f489a4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e4d2044cb2c929598b05daa58190051f = $(`<div id="html_e4d2044cb2c929598b05daa58190051f" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-08, Crime: SHOPLIFTING - PETTY THEFT ($950 & UNDER)</div>`)[0];
+                popup_d81edb93291e5f96ebca811aa5f489a4.setContent(html_e4d2044cb2c929598b05daa58190051f);
+            
+        
+
+        marker_391283ac5cd792d177a7630916f63267.bindPopup(popup_d81edb93291e5f96ebca811aa5f489a4)
+        ;
+
+        
+    
+    
+            var marker_f6b974109b948d88df4c81e4a207dac7 = L.marker(
+                [34.0493, -118.2418],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_b802ca272184a69d462c1bd7b167fc9b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4ada4ab302d9fb92d177f743de487005 = $(`<div id="html_4ada4ab302d9fb92d177f743de487005" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-05, Crime: THEFT-GRAND ($950.01 & OVER)EXCPT,GUNS,FOWL,LIVESTK,PROD</div>`)[0];
+                popup_b802ca272184a69d462c1bd7b167fc9b.setContent(html_4ada4ab302d9fb92d177f743de487005);
+            
+        
+
+        marker_f6b974109b948d88df4c81e4a207dac7.bindPopup(popup_b802ca272184a69d462c1bd7b167fc9b)
+        ;
+
+        
+    
+    
+            var marker_d864d60cb1f819979a387b94087c5793 = L.marker(
+                [34.048, -118.2577],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_bb892c27fd6a18748c360bb00de6bd89 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_80a03d259ec277b7f58c2d1f10d01b3a = $(`<div id="html_80a03d259ec277b7f58c2d1f10d01b3a" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-09, Crime: SHOPLIFTING - PETTY THEFT ($950 & UNDER)</div>`)[0];
+                popup_bb892c27fd6a18748c360bb00de6bd89.setContent(html_80a03d259ec277b7f58c2d1f10d01b3a);
+            
+        
+
+        marker_d864d60cb1f819979a387b94087c5793.bindPopup(popup_bb892c27fd6a18748c360bb00de6bd89)
+        ;
+
+        
+    
+    
+            var marker_87e6bdda7894573f2fdda361ee216a25 = L.marker(
+                [34.0502, -118.2574],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_0d99fb28595d850f8b4bf55cf519052a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5faafc01de83f303d17ac7d3e9d9cab1 = $(`<div id="html_5faafc01de83f303d17ac7d3e9d9cab1" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-01, Crime: THEFT-GRAND ($950.01 & OVER)EXCPT,GUNS,FOWL,LIVESTK,PROD</div>`)[0];
+                popup_0d99fb28595d850f8b4bf55cf519052a.setContent(html_5faafc01de83f303d17ac7d3e9d9cab1);
+            
+        
+
+        marker_87e6bdda7894573f2fdda361ee216a25.bindPopup(popup_0d99fb28595d850f8b4bf55cf519052a)
+        ;
+
+        
+    
+    
+            var marker_5f505eb7e255615ef02bb4f25c14c0de = L.marker(
+                [34.0511, -118.2608],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_7634f5531e65472f53def28956aaa9dc = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b9c3b4e9d8e4a49260f64f9e350e4159 = $(`<div id="html_b9c3b4e9d8e4a49260f64f9e350e4159" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-09, Crime: THEFT PLAIN - PETTY ($950 & UNDER)</div>`)[0];
+                popup_7634f5531e65472f53def28956aaa9dc.setContent(html_b9c3b4e9d8e4a49260f64f9e350e4159);
+            
+        
+
+        marker_5f505eb7e255615ef02bb4f25c14c0de.bindPopup(popup_7634f5531e65472f53def28956aaa9dc)
+        ;
+
+        
+    
+    
+            var marker_e805c30e5b775266fe4ac296d1bd471a = L.marker(
+                [34.0419, -118.2523],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_c74f0dc5142c9e857e20f23e31cbfca1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_133571b576500fb28093d836d1784152 = $(`<div id="html_133571b576500fb28093d836d1784152" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-06, Crime: THEFT PLAIN - PETTY ($950 & UNDER)</div>`)[0];
+                popup_c74f0dc5142c9e857e20f23e31cbfca1.setContent(html_133571b576500fb28093d836d1784152);
+            
+        
+
+        marker_e805c30e5b775266fe4ac296d1bd471a.bindPopup(popup_c74f0dc5142c9e857e20f23e31cbfca1)
+        ;
+
+        
+    
+    
+            var marker_77ccc77b74b23dc23cb25c05bcedbb51 = L.marker(
+                [34.0623, -118.2383],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_d5245d407b6c179031ce73dae6a0afe1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e54068a207f268d086e3d7faea43f8d5 = $(`<div id="html_e54068a207f268d086e3d7faea43f8d5" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-08, Crime: THEFT, PERSON</div>`)[0];
+                popup_d5245d407b6c179031ce73dae6a0afe1.setContent(html_e54068a207f268d086e3d7faea43f8d5);
+            
+        
+
+        marker_77ccc77b74b23dc23cb25c05bcedbb51.bindPopup(popup_d5245d407b6c179031ce73dae6a0afe1)
+        ;
+
+        
+    
+    
+            var marker_3452d95d3c65ff3f6bb1103f886d1092 = L.marker(
+                [34.0416, -118.262],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_7ec3c520ddd15db8841d76a504873532 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ac9f8a524556a7afd4a3f73f6acb38ad = $(`<div id="html_ac9f8a524556a7afd4a3f73f6acb38ad" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-08, Crime: THEFT-GRAND ($950.01 & OVER)EXCPT,GUNS,FOWL,LIVESTK,PROD</div>`)[0];
+                popup_7ec3c520ddd15db8841d76a504873532.setContent(html_ac9f8a524556a7afd4a3f73f6acb38ad);
+            
+        
+
+        marker_3452d95d3c65ff3f6bb1103f886d1092.bindPopup(popup_7ec3c520ddd15db8841d76a504873532)
+        ;
+
+        
+    
+    
+            var marker_31098393d1478fadbc5657cca48422cf = L.marker(
+                [34.0481, -118.2542],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_a445c9ec0cf279b902ee836d03bcb071 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_cceece772f4810ae74263723a0a7b2d9 = $(`<div id="html_cceece772f4810ae74263723a0a7b2d9" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-09, Crime: THEFT-GRAND ($950.01 & OVER)EXCPT,GUNS,FOWL,LIVESTK,PROD</div>`)[0];
+                popup_a445c9ec0cf279b902ee836d03bcb071.setContent(html_cceece772f4810ae74263723a0a7b2d9);
+            
+        
+
+        marker_31098393d1478fadbc5657cca48422cf.bindPopup(popup_a445c9ec0cf279b902ee836d03bcb071)
+        ;
+
+        
+    
+    
+            var marker_99dfacd5c35a9ebfd308af68250e6c1d = L.marker(
+                [34.0438, -118.2416],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_bc7f62f8e3596ac5e40be892264d72e6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4e98a283ce57fb26ddd62e87f600bf7b = $(`<div id="html_4e98a283ce57fb26ddd62e87f600bf7b" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-10, Crime: THEFT PLAIN - PETTY ($950 & UNDER)</div>`)[0];
+                popup_bc7f62f8e3596ac5e40be892264d72e6.setContent(html_4e98a283ce57fb26ddd62e87f600bf7b);
+            
+        
+
+        marker_99dfacd5c35a9ebfd308af68250e6c1d.bindPopup(popup_bc7f62f8e3596ac5e40be892264d72e6)
+        ;
+
+        
+    
+    
+            var marker_451066ed4fa5fd053659774e5cefec0e = L.marker(
+                [34.0416, -118.2398],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_a6027243b1e355a1658b12e8a3dd70fa = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_98119ceb90db2b34a479f6d065a068c2 = $(`<div id="html_98119ceb90db2b34a479f6d065a068c2" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-11, Crime: THEFT PLAIN - PETTY ($950 & UNDER)</div>`)[0];
+                popup_a6027243b1e355a1658b12e8a3dd70fa.setContent(html_98119ceb90db2b34a479f6d065a068c2);
+            
+        
+
+        marker_451066ed4fa5fd053659774e5cefec0e.bindPopup(popup_a6027243b1e355a1658b12e8a3dd70fa)
+        ;
+
+        
+    
+    
+            var marker_34de2bc2e8c4773ab3ed5e1ca42809e3 = L.marker(
+                [34.0493, -118.2418],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_71d893e7d021f74259f8b51cb6cf93cb = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_18bbb316848b18e00ff2c47358cde963 = $(`<div id="html_18bbb316848b18e00ff2c47358cde963" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-02, Crime: THEFT OF IDENTITY</div>`)[0];
+                popup_71d893e7d021f74259f8b51cb6cf93cb.setContent(html_18bbb316848b18e00ff2c47358cde963);
+            
+        
+
+        marker_34de2bc2e8c4773ab3ed5e1ca42809e3.bindPopup(popup_71d893e7d021f74259f8b51cb6cf93cb)
+        ;
+
+        
+    
+    
+            var marker_470a4ca86a7f730ca07a02f3efb94fd9 = L.marker(
+                [34.0444, -118.2628],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_c5a9ac8f55ab48729e132a18c6c12ad4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4a77c4aeed2ad3533a214ed59552194b = $(`<div id="html_4a77c4aeed2ad3533a214ed59552194b" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-10, Crime: BUNCO, GRAND THEFT</div>`)[0];
+                popup_c5a9ac8f55ab48729e132a18c6c12ad4.setContent(html_4a77c4aeed2ad3533a214ed59552194b);
+            
+        
+
+        marker_470a4ca86a7f730ca07a02f3efb94fd9.bindPopup(popup_c5a9ac8f55ab48729e132a18c6c12ad4)
+        ;
+
+        
+    
+    
+            var marker_e1824f6f9c0b88dda7fc33ca15e91efd = L.marker(
+                [34.0586, -118.2402],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_d11d8a2ffe69a654941c2c5626f19511 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7e41240684b6d8991e406a1d23f03d07 = $(`<div id="html_7e41240684b6d8991e406a1d23f03d07" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-11, Crime: THEFT PLAIN - PETTY ($950 & UNDER)</div>`)[0];
+                popup_d11d8a2ffe69a654941c2c5626f19511.setContent(html_7e41240684b6d8991e406a1d23f03d07);
+            
+        
+
+        marker_e1824f6f9c0b88dda7fc33ca15e91efd.bindPopup(popup_d11d8a2ffe69a654941c2c5626f19511)
+        ;
+
+        
+    
+    
+            var marker_415c4edf2a613df205189d7e62ca7d0c = L.marker(
+                [34.0453, -118.2443],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_b779b1f6a53ce5ea2a78fcd43887d53c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4f9f8782e9202e49cedccfb4c38d1eb9 = $(`<div id="html_4f9f8782e9202e49cedccfb4c38d1eb9" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-11, Crime: THEFT, PERSON</div>`)[0];
+                popup_b779b1f6a53ce5ea2a78fcd43887d53c.setContent(html_4f9f8782e9202e49cedccfb4c38d1eb9);
+            
+        
+
+        marker_415c4edf2a613df205189d7e62ca7d0c.bindPopup(popup_b779b1f6a53ce5ea2a78fcd43887d53c)
+        ;
+
+        
+    
+    
+            var marker_830ab39575aca03bd447b07ba6e00994 = L.marker(
+                [34.0474, -118.2496],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_0683316281a2da31288eb1640148faea = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_85a538f0120358505eee1e2fb9c6d985 = $(`<div id="html_85a538f0120358505eee1e2fb9c6d985" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-11, Crime: THEFT PLAIN - PETTY ($950 & UNDER)</div>`)[0];
+                popup_0683316281a2da31288eb1640148faea.setContent(html_85a538f0120358505eee1e2fb9c6d985);
+            
+        
+
+        marker_830ab39575aca03bd447b07ba6e00994.bindPopup(popup_0683316281a2da31288eb1640148faea)
+        ;
+
+        
+    
+    
+            var marker_4278da81fba7ddfb036670f3c72e1c13 = L.marker(
+                [34.0416, -118.255],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_57eaa02c8824a5b6bf1476a7854e19cf = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f33ebba5c273f5e29a4f21a4adf6d578 = $(`<div id="html_f33ebba5c273f5e29a4f21a4adf6d578" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-28, Crime: THEFT OF IDENTITY</div>`)[0];
+                popup_57eaa02c8824a5b6bf1476a7854e19cf.setContent(html_f33ebba5c273f5e29a4f21a4adf6d578);
+            
+        
+
+        marker_4278da81fba7ddfb036670f3c72e1c13.bindPopup(popup_57eaa02c8824a5b6bf1476a7854e19cf)
+        ;
+
+        
+    
+    
+            var marker_9d1aa9b629a82dfd42cb4dc25607940f = L.marker(
+                [34.0563, -118.2374],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_0b11833c38bf576887c695a96433d9be = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6bb8d53efcaa22efc53e0afaf316fa27 = $(`<div id="html_6bb8d53efcaa22efc53e0afaf316fa27" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-11, Crime: SHOPLIFTING - PETTY THEFT ($950 & UNDER)</div>`)[0];
+                popup_0b11833c38bf576887c695a96433d9be.setContent(html_6bb8d53efcaa22efc53e0afaf316fa27);
+            
+        
+
+        marker_9d1aa9b629a82dfd42cb4dc25607940f.bindPopup(popup_0b11833c38bf576887c695a96433d9be)
+        ;
+
+        
+    
+    
+            var marker_35546c4e69fbac58442cfc74cd36243a = L.marker(
+                [34.043, -118.2641],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_c8ff4a03163fc465c06f64ba80a4288c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e176d1cb07f18037170479ba7c40285a = $(`<div id="html_e176d1cb07f18037170479ba7c40285a" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-11, Crime: THEFT-GRAND ($950.01 & OVER)EXCPT,GUNS,FOWL,LIVESTK,PROD</div>`)[0];
+                popup_c8ff4a03163fc465c06f64ba80a4288c.setContent(html_e176d1cb07f18037170479ba7c40285a);
+            
+        
+
+        marker_35546c4e69fbac58442cfc74cd36243a.bindPopup(popup_c8ff4a03163fc465c06f64ba80a4288c)
+        ;
+
+        
+    
+    
+            var marker_2ae88bb506889a1f92c9ae6a7ff15f30 = L.marker(
+                [34.0431, -118.2692],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_66061deac1705c453e7c693eee92dd4e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8ed873ece5073e0350c102796f22c882 = $(`<div id="html_8ed873ece5073e0350c102796f22c882" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-09, Crime: THEFT, PERSON</div>`)[0];
+                popup_66061deac1705c453e7c693eee92dd4e.setContent(html_8ed873ece5073e0350c102796f22c882);
+            
+        
+
+        marker_2ae88bb506889a1f92c9ae6a7ff15f30.bindPopup(popup_66061deac1705c453e7c693eee92dd4e)
+        ;
+
+        
+    
+    
+            var marker_2a1129c45ff144794968a5a26c184ce0 = L.marker(
+                [34.0376, -118.2594],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_1ec4f310286178eec7a3f5e8e8fe007b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3c9a1f394ce6d6b93296686d96121b63 = $(`<div id="html_3c9a1f394ce6d6b93296686d96121b63" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-11, Crime: THEFT-GRAND ($950.01 & OVER)EXCPT,GUNS,FOWL,LIVESTK,PROD</div>`)[0];
+                popup_1ec4f310286178eec7a3f5e8e8fe007b.setContent(html_3c9a1f394ce6d6b93296686d96121b63);
+            
+        
+
+        marker_2a1129c45ff144794968a5a26c184ce0.bindPopup(popup_1ec4f310286178eec7a3f5e8e8fe007b)
+        ;
+
+        
+    
+    
+            var marker_5aeb47c4a61e4f5e71012e4fbc0d56e0 = L.marker(
+                [34.097, -118.1695],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_4633c02964b6603412b96ff85e5227a1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_74f4390bdba452617b07603494c97ee0 = $(`<div id="html_74f4390bdba452617b07603494c97ee0" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-30, Crime: THEFT OF IDENTITY</div>`)[0];
+                popup_4633c02964b6603412b96ff85e5227a1.setContent(html_74f4390bdba452617b07603494c97ee0);
+            
+        
+
+        marker_5aeb47c4a61e4f5e71012e4fbc0d56e0.bindPopup(popup_4633c02964b6603412b96ff85e5227a1)
+        ;
+
+        
+    
+    
+            var marker_cada6bc40138490c22a0d525f42c157b = L.marker(
+                [34.0491, -118.2558],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_0bd4ae69a1efc2862e7c520089ed4bfc = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4a5c2c420e4b7bb9650153543dacb5d5 = $(`<div id="html_4a5c2c420e4b7bb9650153543dacb5d5" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-12, Crime: SHOPLIFTING - PETTY THEFT ($950 & UNDER)</div>`)[0];
+                popup_0bd4ae69a1efc2862e7c520089ed4bfc.setContent(html_4a5c2c420e4b7bb9650153543dacb5d5);
+            
+        
+
+        marker_cada6bc40138490c22a0d525f42c157b.bindPopup(popup_0bd4ae69a1efc2862e7c520089ed4bfc)
+        ;
+
+        
+    
+    
+            var marker_4354ee1f3f64c9a709da7d118cc64fa0 = L.marker(
+                [34.046, -118.2509],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_cd6716a78924cae99116074b403eeca1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6396c8e26083121d7826bf089ebb75ad = $(`<div id="html_6396c8e26083121d7826bf089ebb75ad" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-11, Crime: THEFT, PERSON</div>`)[0];
+                popup_cd6716a78924cae99116074b403eeca1.setContent(html_6396c8e26083121d7826bf089ebb75ad);
+            
+        
+
+        marker_4354ee1f3f64c9a709da7d118cc64fa0.bindPopup(popup_cd6716a78924cae99116074b403eeca1)
+        ;
+
+        
+    
+    
+            var marker_4f6c9613b38b61a1fb216726b94899af = L.marker(
+                [34.0473, -118.2566],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_ce9544361e1ffd3286c3b4fe7b21152d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d95e41a7bb15fcf1768422fea2dbb403 = $(`<div id="html_d95e41a7bb15fcf1768422fea2dbb403" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-11, Crime: THEFT PLAIN - PETTY ($950 & UNDER)</div>`)[0];
+                popup_ce9544361e1ffd3286c3b4fe7b21152d.setContent(html_d95e41a7bb15fcf1768422fea2dbb403);
+            
+        
+
+        marker_4f6c9613b38b61a1fb216726b94899af.bindPopup(popup_ce9544361e1ffd3286c3b4fe7b21152d)
+        ;
+
+        
+    
+    
+            var marker_e31a1d08140005b7224694d7bd6cd51c = L.marker(
+                [34.0351, -118.2672],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_c266f03cd3e577631fd1244f2256dfbe = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1a7b32d931be23367cadb8ebd779d1da = $(`<div id="html_1a7b32d931be23367cadb8ebd779d1da" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-05, Crime: THEFT FROM MOTOR VEHICLE - PETTY ($950 & UNDER)</div>`)[0];
+                popup_c266f03cd3e577631fd1244f2256dfbe.setContent(html_1a7b32d931be23367cadb8ebd779d1da);
+            
+        
+
+        marker_e31a1d08140005b7224694d7bd6cd51c.bindPopup(popup_c266f03cd3e577631fd1244f2256dfbe)
+        ;
+
+        
+    
+    
+            var marker_305d276170d355c9a5b0e0f2beefc769 = L.marker(
+                [34.0473, -118.2566],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_8927fff14f6e88e1ba173d1bee9a1910 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d674b5496186f12dee99cb8bcf019404 = $(`<div id="html_d674b5496186f12dee99cb8bcf019404" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-10, Crime: THEFT-GRAND ($950.01 & OVER)EXCPT,GUNS,FOWL,LIVESTK,PROD</div>`)[0];
+                popup_8927fff14f6e88e1ba173d1bee9a1910.setContent(html_d674b5496186f12dee99cb8bcf019404);
+            
+        
+
+        marker_305d276170d355c9a5b0e0f2beefc769.bindPopup(popup_8927fff14f6e88e1ba173d1bee9a1910)
+        ;
+
+        
+    
+    
+            var marker_0fe57661ece91ec247a0bc892d9c3f3a = L.marker(
+                [34.0452, -118.2569],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_ef18f17e7a15ce5d8a8a197441e1a20c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_85e257265095d6934ceede1f44c6fb21 = $(`<div id="html_85e257265095d6934ceede1f44c6fb21" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-12, Crime: THEFT PLAIN - PETTY ($950 & UNDER)</div>`)[0];
+                popup_ef18f17e7a15ce5d8a8a197441e1a20c.setContent(html_85e257265095d6934ceede1f44c6fb21);
+            
+        
+
+        marker_0fe57661ece91ec247a0bc892d9c3f3a.bindPopup(popup_ef18f17e7a15ce5d8a8a197441e1a20c)
+        ;
+
+        
+    
+    
+            var marker_2bf4090df8c36a158e3329fbc710cf90 = L.marker(
+                [34.0547, -118.2505],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_9f2be7357bc2be49e06c2f828cc87e1d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_be46d3b05e0e6ee46792306807c4c5cb = $(`<div id="html_be46d3b05e0e6ee46792306807c4c5cb" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-14, Crime: THEFT PLAIN - PETTY ($950 & UNDER)</div>`)[0];
+                popup_9f2be7357bc2be49e06c2f828cc87e1d.setContent(html_be46d3b05e0e6ee46792306807c4c5cb);
+            
+        
+
+        marker_2bf4090df8c36a158e3329fbc710cf90.bindPopup(popup_9f2be7357bc2be49e06c2f828cc87e1d)
+        ;
+
+        
+    
+    
+            var marker_4d712681b2fffdaf5405589b7777dcc6 = L.marker(
+                [34.0431, -118.2692],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_fac5400fd32e3397dece4d4fc2250a02 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_fe7d82362b2fa186684b5084e4bde812 = $(`<div id="html_fe7d82362b2fa186684b5084e4bde812" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-11, Crime: THEFT-GRAND ($950.01 & OVER)EXCPT,GUNS,FOWL,LIVESTK,PROD</div>`)[0];
+                popup_fac5400fd32e3397dece4d4fc2250a02.setContent(html_fe7d82362b2fa186684b5084e4bde812);
+            
+        
+
+        marker_4d712681b2fffdaf5405589b7777dcc6.bindPopup(popup_fac5400fd32e3397dece4d4fc2250a02)
+        ;
+
+        
+    
+    
+            var marker_dfb8dbb4913c0456effea3eb8304b0f4 = L.marker(
+                [34.051, -118.248],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_adf55b140736bdf332c343d903178ae5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e76a1b60fbe8098802453e5c36a82119 = $(`<div id="html_e76a1b60fbe8098802453e5c36a82119" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-12, Crime: THEFT PLAIN - PETTY ($950 & UNDER)</div>`)[0];
+                popup_adf55b140736bdf332c343d903178ae5.setContent(html_e76a1b60fbe8098802453e5c36a82119);
+            
+        
+
+        marker_dfb8dbb4913c0456effea3eb8304b0f4.bindPopup(popup_adf55b140736bdf332c343d903178ae5)
+        ;
+
+        
+    
+    
+            var marker_888b24a978a3e5cd346711bf02783a4c = L.marker(
+                [33.9691, -118.3309],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_f6fc3e6c5472d3fdab3f5562b7298bd6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b849a8055403ccfeb4490df94c472436 = $(`<div id="html_b849a8055403ccfeb4490df94c472436" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-01, Crime: THEFT OF IDENTITY</div>`)[0];
+                popup_f6fc3e6c5472d3fdab3f5562b7298bd6.setContent(html_b849a8055403ccfeb4490df94c472436);
+            
+        
+
+        marker_888b24a978a3e5cd346711bf02783a4c.bindPopup(popup_f6fc3e6c5472d3fdab3f5562b7298bd6)
+        ;
+
+        
+    
+    
+            var marker_1bea0d5424dc0691641c919599c9b533 = L.marker(
+                [34.0908, -118.3012],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_8e47b496545876ff2886a171acfc59f6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_aa4af394c4c64e32e87595149bb9fcf1 = $(`<div id="html_aa4af394c4c64e32e87595149bb9fcf1" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-10, Crime: THEFT OF IDENTITY</div>`)[0];
+                popup_8e47b496545876ff2886a171acfc59f6.setContent(html_aa4af394c4c64e32e87595149bb9fcf1);
+            
+        
+
+        marker_1bea0d5424dc0691641c919599c9b533.bindPopup(popup_8e47b496545876ff2886a171acfc59f6)
+        ;
+
+        
+    
+    
+            var marker_4a249806755d45ac6a6324fbeca9e35b = L.marker(
+                [34.0402, -118.2684],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_aa2c7e850cdfea05b55d9bd1d9c6d485 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5cc265102bf89601e61978d18182e823 = $(`<div id="html_5cc265102bf89601e61978d18182e823" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-13, Crime: THEFT PLAIN - PETTY ($950 & UNDER)</div>`)[0];
+                popup_aa2c7e850cdfea05b55d9bd1d9c6d485.setContent(html_5cc265102bf89601e61978d18182e823);
+            
+        
+
+        marker_4a249806755d45ac6a6324fbeca9e35b.bindPopup(popup_aa2c7e850cdfea05b55d9bd1d9c6d485)
+        ;
+
+        
+    
+    
+            var marker_2f72c544e53d97f21f1636599fd34c44 = L.marker(
+                [34.048, -118.2577],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_fc313bb51d67644dcc84acb8659bd4fb = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d8c0130025cfd75fc5d86fbcc34d61a7 = $(`<div id="html_d8c0130025cfd75fc5d86fbcc34d61a7" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-13, Crime: SHOPLIFTING - PETTY THEFT ($950 & UNDER)</div>`)[0];
+                popup_fc313bb51d67644dcc84acb8659bd4fb.setContent(html_d8c0130025cfd75fc5d86fbcc34d61a7);
+            
+        
+
+        marker_2f72c544e53d97f21f1636599fd34c44.bindPopup(popup_fc313bb51d67644dcc84acb8659bd4fb)
+        ;
+
+        
+    
+    
+            var marker_60102314154413a9d93c0d87ba5545db = L.marker(
+                [34.0452, -118.2534],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_44c954801ec573c9636c8ab213b3685f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7cf95a2a53a8c7946144b760ed0e6f1c = $(`<div id="html_7cf95a2a53a8c7946144b760ed0e6f1c" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-12, Crime: THEFT PLAIN - PETTY ($950 & UNDER)</div>`)[0];
+                popup_44c954801ec573c9636c8ab213b3685f.setContent(html_7cf95a2a53a8c7946144b760ed0e6f1c);
+            
+        
+
+        marker_60102314154413a9d93c0d87ba5545db.bindPopup(popup_44c954801ec573c9636c8ab213b3685f)
+        ;
+
+        
+    
+    
+            var marker_6a596499acd928dc9dba3213dbc7c524 = L.marker(
+                [34.0449, -118.2458],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_02cbc624ca65e6a3a74311ba320a690d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_26203930facc05422f40dc04734550d4 = $(`<div id="html_26203930facc05422f40dc04734550d4" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-13, Crime: THEFT FROM MOTOR VEHICLE - PETTY ($950 & UNDER)</div>`)[0];
+                popup_02cbc624ca65e6a3a74311ba320a690d.setContent(html_26203930facc05422f40dc04734550d4);
+            
+        
+
+        marker_6a596499acd928dc9dba3213dbc7c524.bindPopup(popup_02cbc624ca65e6a3a74311ba320a690d)
+        ;
+
+        
+    
+    
+            var marker_f05743f97de8c7ba5a6ec0cfd30a4e78 = L.marker(
+                [34.048, -118.2577],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_e091c6db0fa17303b28f1cb24712725d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_12ed1245a1e21e1fcf40ac198d093d7f = $(`<div id="html_12ed1245a1e21e1fcf40ac198d093d7f" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-13, Crime: THEFT PLAIN - PETTY ($950 & UNDER)</div>`)[0];
+                popup_e091c6db0fa17303b28f1cb24712725d.setContent(html_12ed1245a1e21e1fcf40ac198d093d7f);
+            
+        
+
+        marker_f05743f97de8c7ba5a6ec0cfd30a4e78.bindPopup(popup_e091c6db0fa17303b28f1cb24712725d)
+        ;
+
+        
+    
+    
+            var marker_7e6a12023c4028a2f06e0d9b640e6fff = L.marker(
+                [34.0483, -118.2631],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_42172c511c344ae0e3ba36f1e41b59cf = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7048a7450a86be3db3e69edda104fdc9 = $(`<div id="html_7048a7450a86be3db3e69edda104fdc9" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-14, Crime: SHOPLIFTING - PETTY THEFT ($950 & UNDER)</div>`)[0];
+                popup_42172c511c344ae0e3ba36f1e41b59cf.setContent(html_7048a7450a86be3db3e69edda104fdc9);
+            
+        
+
+        marker_7e6a12023c4028a2f06e0d9b640e6fff.bindPopup(popup_42172c511c344ae0e3ba36f1e41b59cf)
+        ;
+
+        
+    
+    
+            var marker_b3a390824eca67a16b9be2d1425c62ec = L.marker(
+                [34.0547, -118.2505],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_62c93a7c5234d153be3b5a62ea025b42 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7a518fc9190443042bf015701f01bcd3 = $(`<div id="html_7a518fc9190443042bf015701f01bcd3" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-14, Crime: THEFT PLAIN - PETTY ($950 & UNDER)</div>`)[0];
+                popup_62c93a7c5234d153be3b5a62ea025b42.setContent(html_7a518fc9190443042bf015701f01bcd3);
+            
+        
+
+        marker_b3a390824eca67a16b9be2d1425c62ec.bindPopup(popup_62c93a7c5234d153be3b5a62ea025b42)
+        ;
+
+        
+    
+    
+            var marker_c3344a9833330b0208883d2cd55d6204 = L.marker(
+                [34.0442, -118.2439],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_35d5468f5796e69fe48b3f98dd0db30d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_eb080828a1311cbf256e5e75a691a62b = $(`<div id="html_eb080828a1311cbf256e5e75a691a62b" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-12, Crime: THEFT PLAIN - PETTY ($950 & UNDER)</div>`)[0];
+                popup_35d5468f5796e69fe48b3f98dd0db30d.setContent(html_eb080828a1311cbf256e5e75a691a62b);
+            
+        
+
+        marker_c3344a9833330b0208883d2cd55d6204.bindPopup(popup_35d5468f5796e69fe48b3f98dd0db30d)
+        ;
+
+        
+    
+    
+            var marker_bd2225b88f587ab0b2292b61d6dfa8d8 = L.marker(
+                [34.0446, -118.245],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_47c9302eda9898733f3fd6ebe51e6838 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_14fb10f56214c4a6e3449e0dab22f66d = $(`<div id="html_14fb10f56214c4a6e3449e0dab22f66d" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-08, Crime: THEFT OF IDENTITY</div>`)[0];
+                popup_47c9302eda9898733f3fd6ebe51e6838.setContent(html_14fb10f56214c4a6e3449e0dab22f66d);
+            
+        
+
+        marker_bd2225b88f587ab0b2292b61d6dfa8d8.bindPopup(popup_47c9302eda9898733f3fd6ebe51e6838)
+        ;
+
+        
+    
+    
+            var marker_b48fee8753e98132316b0638d9d0c49b = L.marker(
+                [34.0557, -118.2488],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_055aa0610323674280415d8e5690e122 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a1196d6368064a5f4da92f51fe50e330 = $(`<div id="html_a1196d6368064a5f4da92f51fe50e330" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-05, Crime: THEFT-GRAND ($950.01 & OVER)EXCPT,GUNS,FOWL,LIVESTK,PROD</div>`)[0];
+                popup_055aa0610323674280415d8e5690e122.setContent(html_a1196d6368064a5f4da92f51fe50e330);
+            
+        
+
+        marker_b48fee8753e98132316b0638d9d0c49b.bindPopup(popup_055aa0610323674280415d8e5690e122)
+        ;
+
+        
+    
+    
+            var marker_75d22dca81587f00e15552eabc683a6e = L.marker(
+                [34.0452, -118.2569],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_92bd5041d8684d96d31f155410e0a271 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3670144e1ffbc748015781ea7462f00d = $(`<div id="html_3670144e1ffbc748015781ea7462f00d" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-13, Crime: THEFT-GRAND ($950.01 & OVER)EXCPT,GUNS,FOWL,LIVESTK,PROD</div>`)[0];
+                popup_92bd5041d8684d96d31f155410e0a271.setContent(html_3670144e1ffbc748015781ea7462f00d);
+            
+        
+
+        marker_75d22dca81587f00e15552eabc683a6e.bindPopup(popup_92bd5041d8684d96d31f155410e0a271)
+        ;
+
+        
+    
+    
+            var marker_d9f3bba47495b273749a02c0ffb19e50 = L.marker(
+                [34.045, -118.264],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_50c54716b4a5aede8d7a84ee8f35eb77 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_abc04d52646572505c124e0d656db501 = $(`<div id="html_abc04d52646572505c124e0d656db501" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-13, Crime: THEFT-GRAND ($950.01 & OVER)EXCPT,GUNS,FOWL,LIVESTK,PROD</div>`)[0];
+                popup_50c54716b4a5aede8d7a84ee8f35eb77.setContent(html_abc04d52646572505c124e0d656db501);
+            
+        
+
+        marker_d9f3bba47495b273749a02c0ffb19e50.bindPopup(popup_50c54716b4a5aede8d7a84ee8f35eb77)
+        ;
+
+        
+    
+    
+            var marker_96b9c2105941562bea64ccbfc9b69125 = L.marker(
+                [34.0615, -118.2412],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_f756297fbd18c972074cee30e945f531 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5fc71d78f6b90911a51cdbf99884e4b5 = $(`<div id="html_5fc71d78f6b90911a51cdbf99884e4b5" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-12, Crime: THEFT-GRAND ($950.01 & OVER)EXCPT,GUNS,FOWL,LIVESTK,PROD</div>`)[0];
+                popup_f756297fbd18c972074cee30e945f531.setContent(html_5fc71d78f6b90911a51cdbf99884e4b5);
+            
+        
+
+        marker_96b9c2105941562bea64ccbfc9b69125.bindPopup(popup_f756297fbd18c972074cee30e945f531)
+        ;
+
+        
+    
+    
+            var marker_18199fea7a4de1f2fd56ec8cfa16cf03 = L.marker(
+                [34.0459, -118.2351],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_5e8559c2d5cdf0d42df7ae4116105aa1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_31de6441d2f432dce511bd054a694aae = $(`<div id="html_31de6441d2f432dce511bd054a694aae" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-02, Crime: THEFT PLAIN - PETTY ($950 & UNDER)</div>`)[0];
+                popup_5e8559c2d5cdf0d42df7ae4116105aa1.setContent(html_31de6441d2f432dce511bd054a694aae);
+            
+        
+
+        marker_18199fea7a4de1f2fd56ec8cfa16cf03.bindPopup(popup_5e8559c2d5cdf0d42df7ae4116105aa1)
+        ;
+
+        
+    
+    
+            var marker_40949f05ea56245e9c96a9c76630a003 = L.marker(
+                [34.0416, -118.262],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_a887a11b5f9ffe591260a80949ec4691 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a52a30f338e3bab4f905336ea9712a9b = $(`<div id="html_a52a30f338e3bab4f905336ea9712a9b" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-10, Crime: THEFT, PERSON</div>`)[0];
+                popup_a887a11b5f9ffe591260a80949ec4691.setContent(html_a52a30f338e3bab4f905336ea9712a9b);
+            
+        
+
+        marker_40949f05ea56245e9c96a9c76630a003.bindPopup(popup_a887a11b5f9ffe591260a80949ec4691)
+        ;
+
+        
+    
+    
+            var marker_f1fa2956116988761a9218831a741b2b = L.marker(
+                [34.0389, -118.2643],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_e623b08c9f922e5f01d80f189a9ecc30 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4997b9ef8e44d6094a69f3cc7fb330ea = $(`<div id="html_4997b9ef8e44d6094a69f3cc7fb330ea" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-10, Crime: THEFT FROM MOTOR VEHICLE - PETTY ($950 & UNDER)</div>`)[0];
+                popup_e623b08c9f922e5f01d80f189a9ecc30.setContent(html_4997b9ef8e44d6094a69f3cc7fb330ea);
+            
+        
+
+        marker_f1fa2956116988761a9218831a741b2b.bindPopup(popup_e623b08c9f922e5f01d80f189a9ecc30)
+        ;
+
+        
+    
+    
+            var marker_b5556c9ae4bfa836b675c17261fdf11f = L.marker(
+                [34.0483, -118.2631],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_c9a84141cd60d8ddf8684821e8ef1367 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_869a8a9721f9f5298cba728d58852fe0 = $(`<div id="html_869a8a9721f9f5298cba728d58852fe0" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-15, Crime: SHOPLIFTING - PETTY THEFT ($950 & UNDER)</div>`)[0];
+                popup_c9a84141cd60d8ddf8684821e8ef1367.setContent(html_869a8a9721f9f5298cba728d58852fe0);
+            
+        
+
+        marker_b5556c9ae4bfa836b675c17261fdf11f.bindPopup(popup_c9a84141cd60d8ddf8684821e8ef1367)
+        ;
+
+        
+    
+    
+            var marker_761baec0349a846592bff997d5ee40dd = L.marker(
+                [34.048, -118.2577],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_6746d0f4bbcfc75d19f9ed7f0181a7b6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6a72603b32012057d314f2e05d5d6ada = $(`<div id="html_6a72603b32012057d314f2e05d5d6ada" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-15, Crime: SHOPLIFTING - PETTY THEFT ($950 & UNDER)</div>`)[0];
+                popup_6746d0f4bbcfc75d19f9ed7f0181a7b6.setContent(html_6a72603b32012057d314f2e05d5d6ada);
+            
+        
+
+        marker_761baec0349a846592bff997d5ee40dd.bindPopup(popup_6746d0f4bbcfc75d19f9ed7f0181a7b6)
+        ;
+
+        
+    
+    
+            var marker_38ad0f746beec03523b78277a6b53b44 = L.marker(
+                [34.0483, -118.2631],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_049017f686f246012ebe0e9806606567 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_426988372066d9a1661c0c5831073308 = $(`<div id="html_426988372066d9a1661c0c5831073308" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-16, Crime: THEFT-GRAND ($950.01 & OVER)EXCPT,GUNS,FOWL,LIVESTK,PROD</div>`)[0];
+                popup_049017f686f246012ebe0e9806606567.setContent(html_426988372066d9a1661c0c5831073308);
+            
+        
+
+        marker_38ad0f746beec03523b78277a6b53b44.bindPopup(popup_049017f686f246012ebe0e9806606567)
+        ;
+
+        
+    
+    
+            var marker_df2c478cec54f5dc1a680937c8419ab9 = L.marker(
+                [34.0381, -118.2401],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_2c84250aba0ba87406f8061eb0c4c393 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d0982b599ad897b60b08f240d66aa14f = $(`<div id="html_d0982b599ad897b60b08f240d66aa14f" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-16, Crime: THEFT FROM MOTOR VEHICLE - PETTY ($950 & UNDER)</div>`)[0];
+                popup_2c84250aba0ba87406f8061eb0c4c393.setContent(html_d0982b599ad897b60b08f240d66aa14f);
+            
+        
+
+        marker_df2c478cec54f5dc1a680937c8419ab9.bindPopup(popup_2c84250aba0ba87406f8061eb0c4c393)
+        ;
+
+        
+    
+    
+            var marker_2b6f8e06820db359bc411ebd09398270 = L.marker(
+                [34.0525, -118.2432],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_6d1e9ac87a004dfa09652a48cbd82caf = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_91d0dd7da2a63b66783ba069b5ef5762 = $(`<div id="html_91d0dd7da2a63b66783ba069b5ef5762" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-16, Crime: SHOPLIFTING - PETTY THEFT ($950 & UNDER)</div>`)[0];
+                popup_6d1e9ac87a004dfa09652a48cbd82caf.setContent(html_91d0dd7da2a63b66783ba069b5ef5762);
+            
+        
+
+        marker_2b6f8e06820db359bc411ebd09398270.bindPopup(popup_6d1e9ac87a004dfa09652a48cbd82caf)
+        ;
+
+        
+    
+    
+            var marker_884559a732748031b9341b6de30581d6 = L.marker(
+                [34.0586, -118.2402],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_a457dbe45d987e0968eeba89ee0af7cc = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1db3bab788e32c800cc086ef5107a2d9 = $(`<div id="html_1db3bab788e32c800cc086ef5107a2d9" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-13, Crime: THEFT PLAIN - PETTY ($950 & UNDER)</div>`)[0];
+                popup_a457dbe45d987e0968eeba89ee0af7cc.setContent(html_1db3bab788e32c800cc086ef5107a2d9);
+            
+        
+
+        marker_884559a732748031b9341b6de30581d6.bindPopup(popup_a457dbe45d987e0968eeba89ee0af7cc)
+        ;
+
+        
+    
+    
+            var marker_4ba1b6f3ca957fa487eef585b16d7385 = L.marker(
+                [34.0437, -118.2455],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_67517171544f30edc712949234f728d8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_77cbfd88b171ca925d42f696110a2bb0 = $(`<div id="html_77cbfd88b171ca925d42f696110a2bb0" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-14, Crime: THEFT PLAIN - PETTY ($950 & UNDER)</div>`)[0];
+                popup_67517171544f30edc712949234f728d8.setContent(html_77cbfd88b171ca925d42f696110a2bb0);
+            
+        
+
+        marker_4ba1b6f3ca957fa487eef585b16d7385.bindPopup(popup_67517171544f30edc712949234f728d8)
+        ;
+
+        
+    
+    
+            var marker_a119bea6a1c8e81b4648ec1267a40642 = L.marker(
+                [34.0438, -118.2416],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_0547ac616d2c7ad1ccc3be707939ad26 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6cab4cc799eb4e0259d30d743df13fbf = $(`<div id="html_6cab4cc799eb4e0259d30d743df13fbf" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-15, Crime: THEFT PLAIN - PETTY ($950 & UNDER)</div>`)[0];
+                popup_0547ac616d2c7ad1ccc3be707939ad26.setContent(html_6cab4cc799eb4e0259d30d743df13fbf);
+            
+        
+
+        marker_a119bea6a1c8e81b4648ec1267a40642.bindPopup(popup_0547ac616d2c7ad1ccc3be707939ad26)
+        ;
+
+        
+    
+    
+            var marker_13e9ed90728ab0702b8dc0e179b8bf53 = L.marker(
+                [34.048, -118.2577],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_e742aeda73719f56c915788546486fab = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7760a1a7200cc04fe54cd9d4199563c1 = $(`<div id="html_7760a1a7200cc04fe54cd9d4199563c1" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-14, Crime: SHOPLIFTING - PETTY THEFT ($950 & UNDER)</div>`)[0];
+                popup_e742aeda73719f56c915788546486fab.setContent(html_7760a1a7200cc04fe54cd9d4199563c1);
+            
+        
+
+        marker_13e9ed90728ab0702b8dc0e179b8bf53.bindPopup(popup_e742aeda73719f56c915788546486fab)
+        ;
+
+        
+    
+    
+            var marker_54990d53924e927e46c1748f38481755 = L.marker(
+                [34.0563, -118.2374],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_3b31f524648443ab73e38f3ee3b80423 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_bfeb4612d29fa8aa90ac614118d516f3 = $(`<div id="html_bfeb4612d29fa8aa90ac614118d516f3" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-15, Crime: THEFT PLAIN - PETTY ($950 & UNDER)</div>`)[0];
+                popup_3b31f524648443ab73e38f3ee3b80423.setContent(html_bfeb4612d29fa8aa90ac614118d516f3);
+            
+        
+
+        marker_54990d53924e927e46c1748f38481755.bindPopup(popup_3b31f524648443ab73e38f3ee3b80423)
+        ;
+
+        
+    
+    
+            var marker_4942c21764a6531ee175f57f56ec5523 = L.marker(
+                [34.048, -118.2577],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_0ffc8a98782be4b54f06d19afbbaee4d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5c50b2f9d95503dd32af792cdb38f219 = $(`<div id="html_5c50b2f9d95503dd32af792cdb38f219" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-16, Crime: SHOPLIFTING - PETTY THEFT ($950 & UNDER)</div>`)[0];
+                popup_0ffc8a98782be4b54f06d19afbbaee4d.setContent(html_5c50b2f9d95503dd32af792cdb38f219);
+            
+        
+
+        marker_4942c21764a6531ee175f57f56ec5523.bindPopup(popup_0ffc8a98782be4b54f06d19afbbaee4d)
+        ;
+
+        
+    
+    
+            var marker_ae890311fcb504e865b3a34282787669 = L.marker(
+                [34.0604, -118.2393],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_69d1d7ec34dd106875e9072e3f57cf30 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_40d21ab279d8b1c90b03b6270adca937 = $(`<div id="html_40d21ab279d8b1c90b03b6270adca937" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-15, Crime: THEFT PLAIN - PETTY ($950 & UNDER)</div>`)[0];
+                popup_69d1d7ec34dd106875e9072e3f57cf30.setContent(html_40d21ab279d8b1c90b03b6270adca937);
+            
+        
+
+        marker_ae890311fcb504e865b3a34282787669.bindPopup(popup_69d1d7ec34dd106875e9072e3f57cf30)
+        ;
+
+        
+    
+    
+            var marker_cb4a6f2b8f9c5c2a9c7f5545d7149c11 = L.marker(
+                [34.0467, -118.2485],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_6da47e073b23f335c1aaeccc19925291 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b9802a27e72db29c7f036919060343fd = $(`<div id="html_b9802a27e72db29c7f036919060343fd" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-10, Crime: BUNCO, PETTY THEFT</div>`)[0];
+                popup_6da47e073b23f335c1aaeccc19925291.setContent(html_b9802a27e72db29c7f036919060343fd);
+            
+        
+
+        marker_cb4a6f2b8f9c5c2a9c7f5545d7149c11.bindPopup(popup_6da47e073b23f335c1aaeccc19925291)
+        ;
+
+        
+    
+    
+            var marker_7d18f089acd4f933f65b9a5b33dfd4b1 = L.marker(
+                [34.0494, -118.4866],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_23f68289f5215ece5e85f841b81d20a0 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c4efd3de306fc742167ffd52dfce991d = $(`<div id="html_c4efd3de306fc742167ffd52dfce991d" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-30, Crime: THEFT OF IDENTITY</div>`)[0];
+                popup_23f68289f5215ece5e85f841b81d20a0.setContent(html_c4efd3de306fc742167ffd52dfce991d);
+            
+        
+
+        marker_7d18f089acd4f933f65b9a5b33dfd4b1.bindPopup(popup_23f68289f5215ece5e85f841b81d20a0)
+        ;
+
+        
+    
+    
+            var marker_f5c55fdaa2ad7381db6e7e2b758b0e53 = L.marker(
+                [34.0502, -118.254],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_658447e9f71bdd3569fa5b82e8e0c777 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_dcead3baf6d20380fcf6268d26a0fe0e = $(`<div id="html_dcead3baf6d20380fcf6268d26a0fe0e" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-16, Crime: THEFT PLAIN - PETTY ($950 & UNDER)</div>`)[0];
+                popup_658447e9f71bdd3569fa5b82e8e0c777.setContent(html_dcead3baf6d20380fcf6268d26a0fe0e);
+            
+        
+
+        marker_f5c55fdaa2ad7381db6e7e2b758b0e53.bindPopup(popup_658447e9f71bdd3569fa5b82e8e0c777)
+        ;
+
+        
+    
+    
+            var marker_5dc30f868120a01b70b1d27143dee98c = L.marker(
+                [34.0488, -118.2553],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_794f07f3c9ce97da9ceefd2a5796b634 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4c20328041b60d2543730f88e451b4c2 = $(`<div id="html_4c20328041b60d2543730f88e451b4c2" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-16, Crime: THEFT PLAIN - PETTY ($950 & UNDER)</div>`)[0];
+                popup_794f07f3c9ce97da9ceefd2a5796b634.setContent(html_4c20328041b60d2543730f88e451b4c2);
+            
+        
+
+        marker_5dc30f868120a01b70b1d27143dee98c.bindPopup(popup_794f07f3c9ce97da9ceefd2a5796b634)
+        ;
+
+        
+    
+    
+            var marker_75a3f12ce09c4170c265839f959169da = L.marker(
+                [34.048, -118.2577],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_f53e977301b089eba3a661b21760bb34 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b99940e2d6e0f57b5237b2f37fa8719d = $(`<div id="html_b99940e2d6e0f57b5237b2f37fa8719d" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-17, Crime: SHOPLIFTING - PETTY THEFT ($950 & UNDER)</div>`)[0];
+                popup_f53e977301b089eba3a661b21760bb34.setContent(html_b99940e2d6e0f57b5237b2f37fa8719d);
+            
+        
+
+        marker_75a3f12ce09c4170c265839f959169da.bindPopup(popup_f53e977301b089eba3a661b21760bb34)
+        ;
+
+        
+    
+    
+            var marker_b6ca01989e7c8d3b25f1025adac5efc1 = L.marker(
+                [34.0481, -118.2507],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_f4df34449715747eb8ba8b1bb2324df4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b0d3c6f31f5242e93b0bbe75d58e3216 = $(`<div id="html_b0d3c6f31f5242e93b0bbe75d58e3216" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-17, Crime: SHOPLIFTING - PETTY THEFT ($950 & UNDER)</div>`)[0];
+                popup_f4df34449715747eb8ba8b1bb2324df4.setContent(html_b0d3c6f31f5242e93b0bbe75d58e3216);
+            
+        
+
+        marker_b6ca01989e7c8d3b25f1025adac5efc1.bindPopup(popup_f4df34449715747eb8ba8b1bb2324df4)
+        ;
+
+        
+    
+    
+            var marker_26afb7bea14988e609b6feadfbcfa852 = L.marker(
+                [34.0416, -118.262],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_3e4557ecf4a48077ff23c484afcdc140 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_28f9b3ba646d7763c18405e6385bb6f2 = $(`<div id="html_28f9b3ba646d7763c18405e6385bb6f2" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-18, Crime: THEFT PLAIN - PETTY ($950 & UNDER)</div>`)[0];
+                popup_3e4557ecf4a48077ff23c484afcdc140.setContent(html_28f9b3ba646d7763c18405e6385bb6f2);
+            
+        
+
+        marker_26afb7bea14988e609b6feadfbcfa852.bindPopup(popup_3e4557ecf4a48077ff23c484afcdc140)
+        ;
+
+        
+    
+    
+            var marker_f0fd3afd376994448a5f47b9d2f0c944 = L.marker(
+                [34.0509, -118.2585],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_5893f783c25ba95182a032adf03b6a78 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_cca00cef65a21b8cab32d997588e4d59 = $(`<div id="html_cca00cef65a21b8cab32d997588e4d59" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-18, Crime: THEFT, PERSON</div>`)[0];
+                popup_5893f783c25ba95182a032adf03b6a78.setContent(html_cca00cef65a21b8cab32d997588e4d59);
+            
+        
+
+        marker_f0fd3afd376994448a5f47b9d2f0c944.bindPopup(popup_5893f783c25ba95182a032adf03b6a78)
+        ;
+
+        
+    
+    
+            var marker_cdd3ad5153ae154312ee58e4dd36e82e = L.marker(
+                [34.0363, -118.2573],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_2bb18abbe57ca447ae84bd843c538629 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e22c653293af3708cb41a300f4dcce71 = $(`<div id="html_e22c653293af3708cb41a300f4dcce71" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-18, Crime: THEFT PLAIN - PETTY ($950 & UNDER)</div>`)[0];
+                popup_2bb18abbe57ca447ae84bd843c538629.setContent(html_e22c653293af3708cb41a300f4dcce71);
+            
+        
+
+        marker_cdd3ad5153ae154312ee58e4dd36e82e.bindPopup(popup_2bb18abbe57ca447ae84bd843c538629)
+        ;
+
+        
+    
+    
+            var marker_42456388a930fbf336f3d36cf411ea3b = L.marker(
+                [34.0549, -118.2426],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_d5001f6328f6750b2d2e8c0631c71da7 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b1e786239f08dd053baad39cd97369bf = $(`<div id="html_b1e786239f08dd053baad39cd97369bf" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-18, Crime: THEFT FROM MOTOR VEHICLE - PETTY ($950 & UNDER)</div>`)[0];
+                popup_d5001f6328f6750b2d2e8c0631c71da7.setContent(html_b1e786239f08dd053baad39cd97369bf);
+            
+        
+
+        marker_42456388a930fbf336f3d36cf411ea3b.bindPopup(popup_d5001f6328f6750b2d2e8c0631c71da7)
+        ;
+
+        
+    
+    
+            var marker_c71a68b68bd68cc693ea1613b13443c5 = L.marker(
+                [34.0452, -118.2534],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_3b56c539e7c908ad7467e711ceca5a48 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_167a5d5484af8328024f681bcc684fc0 = $(`<div id="html_167a5d5484af8328024f681bcc684fc0" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-18, Crime: SHOPLIFTING-GRAND THEFT ($950.01 & OVER)</div>`)[0];
+                popup_3b56c539e7c908ad7467e711ceca5a48.setContent(html_167a5d5484af8328024f681bcc684fc0);
+            
+        
+
+        marker_c71a68b68bd68cc693ea1613b13443c5.bindPopup(popup_3b56c539e7c908ad7467e711ceca5a48)
+        ;
+
+        
+    
+    
+            var marker_181154e1383b6ba00dc050dde0560059 = L.marker(
+                [34.0461, -118.2395],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_835acfe14b5d15d79356fc2824c4ea7f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f4749f2042cc6614fc1547d46672b398 = $(`<div id="html_f4749f2042cc6614fc1547d46672b398" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-18, Crime: THEFT FROM MOTOR VEHICLE - PETTY ($950 & UNDER)</div>`)[0];
+                popup_835acfe14b5d15d79356fc2824c4ea7f.setContent(html_f4749f2042cc6614fc1547d46672b398);
+            
+        
+
+        marker_181154e1383b6ba00dc050dde0560059.bindPopup(popup_835acfe14b5d15d79356fc2824c4ea7f)
+        ;
+
+        
+    
+    
+            var marker_741cf08a83c3fc1869a59c6bdbcf8a1e = L.marker(
+                [34.0454, -118.2657],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_4d5b9cda8a308ee5c8f70199984e21b0 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f73ea5979f0cf953313020ecb3eb53c3 = $(`<div id="html_f73ea5979f0cf953313020ecb3eb53c3" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-18, Crime: SHOPLIFTING - PETTY THEFT ($950 & UNDER)</div>`)[0];
+                popup_4d5b9cda8a308ee5c8f70199984e21b0.setContent(html_f73ea5979f0cf953313020ecb3eb53c3);
+            
+        
+
+        marker_741cf08a83c3fc1869a59c6bdbcf8a1e.bindPopup(popup_4d5b9cda8a308ee5c8f70199984e21b0)
+        ;
+
+        
+    
+    
+            var marker_4389883ff87c5e45d6b33b2e52c54cf0 = L.marker(
+                [34.038, -118.243],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_711c772577c46c8f725d9ba053c73dd3 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6e59d0f7924598ad7f815c17d42578f3 = $(`<div id="html_6e59d0f7924598ad7f815c17d42578f3" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-18, Crime: THEFT FROM MOTOR VEHICLE - PETTY ($950 & UNDER)</div>`)[0];
+                popup_711c772577c46c8f725d9ba053c73dd3.setContent(html_6e59d0f7924598ad7f815c17d42578f3);
+            
+        
+
+        marker_4389883ff87c5e45d6b33b2e52c54cf0.bindPopup(popup_711c772577c46c8f725d9ba053c73dd3)
+        ;
+
+        
+    
+    
+            var marker_6604e6d2dd76ae8176fa0a199a57aa76 = L.marker(
+                [34.0445, -118.2523],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_759c3df7b25d2d62c8a6506c5aec3dac = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0f936afbbe3b9252dce952dfe08a3f3e = $(`<div id="html_0f936afbbe3b9252dce952dfe08a3f3e" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-18, Crime: THEFT, PERSON</div>`)[0];
+                popup_759c3df7b25d2d62c8a6506c5aec3dac.setContent(html_0f936afbbe3b9252dce952dfe08a3f3e);
+            
+        
+
+        marker_6604e6d2dd76ae8176fa0a199a57aa76.bindPopup(popup_759c3df7b25d2d62c8a6506c5aec3dac)
+        ;
+
+        
+    
+    
+            var marker_0f952ff7ce9cc028d1deb31740816ce7 = L.marker(
+                [34.0631, -118.2337],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_8b56a2c3f362f8ebad2146e985ba979a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_fe8337e51cd374e81f7114239da7a43d = $(`<div id="html_fe8337e51cd374e81f7114239da7a43d" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-19, Crime: THEFT-GRAND ($950.01 & OVER)EXCPT,GUNS,FOWL,LIVESTK,PROD</div>`)[0];
+                popup_8b56a2c3f362f8ebad2146e985ba979a.setContent(html_fe8337e51cd374e81f7114239da7a43d);
+            
+        
+
+        marker_0f952ff7ce9cc028d1deb31740816ce7.bindPopup(popup_8b56a2c3f362f8ebad2146e985ba979a)
+        ;
+
+        
+    
+    
+            var marker_4c39a8a53585ed9a1bf01078b4bc4783 = L.marker(
+                [34.071, -118.2302],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_eb955e0cd1dc8dfffb87fe891613183b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d936f8251ee5becdf42b463a95597d8d = $(`<div id="html_d936f8251ee5becdf42b463a95597d8d" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-19, Crime: THEFT PLAIN - PETTY ($950 & UNDER)</div>`)[0];
+                popup_eb955e0cd1dc8dfffb87fe891613183b.setContent(html_d936f8251ee5becdf42b463a95597d8d);
+            
+        
+
+        marker_4c39a8a53585ed9a1bf01078b4bc4783.bindPopup(popup_eb955e0cd1dc8dfffb87fe891613183b)
+        ;
+
+        
+    
+    
+            var marker_f8e5853abe94368b4685294a7a27c1d1 = L.marker(
+                [34.0563, -118.2374],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_bf743da1c5672ddccca3cc0a046f29da = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1317f800c70089d59ca70e9deaebf8ea = $(`<div id="html_1317f800c70089d59ca70e9deaebf8ea" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-19, Crime: THEFT-GRAND ($950.01 & OVER)EXCPT,GUNS,FOWL,LIVESTK,PROD</div>`)[0];
+                popup_bf743da1c5672ddccca3cc0a046f29da.setContent(html_1317f800c70089d59ca70e9deaebf8ea);
+            
+        
+
+        marker_f8e5853abe94368b4685294a7a27c1d1.bindPopup(popup_bf743da1c5672ddccca3cc0a046f29da)
+        ;
+
+        
+    
+    
+            var marker_a5c0a54a8a6cbde90640d61d9e3163df = L.marker(
+                [34.048, -118.2577],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_2f8215b2213a633b6333cf7ae00c03cb = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3224a1f83aa0e49356dd650c1b5ec0ec = $(`<div id="html_3224a1f83aa0e49356dd650c1b5ec0ec" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-18, Crime: SHOPLIFTING - PETTY THEFT ($950 & UNDER)</div>`)[0];
+                popup_2f8215b2213a633b6333cf7ae00c03cb.setContent(html_3224a1f83aa0e49356dd650c1b5ec0ec);
+            
+        
+
+        marker_a5c0a54a8a6cbde90640d61d9e3163df.bindPopup(popup_2f8215b2213a633b6333cf7ae00c03cb)
+        ;
+
+        
+    
+    
+            var marker_018370a887ff4df64a0db6e243ea0dc9 = L.marker(
+                [34.0402, -118.2633],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_fcf58e98b078347038a94c06a933c044 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_77541bbecd306c9eca10d83a4439204f = $(`<div id="html_77541bbecd306c9eca10d83a4439204f" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-19, Crime: THEFT FROM MOTOR VEHICLE - PETTY ($950 & UNDER)</div>`)[0];
+                popup_fcf58e98b078347038a94c06a933c044.setContent(html_77541bbecd306c9eca10d83a4439204f);
+            
+        
+
+        marker_018370a887ff4df64a0db6e243ea0dc9.bindPopup(popup_fcf58e98b078347038a94c06a933c044)
+        ;
+
+        
+    
+    
+            var marker_6673c4f4432c90ff15b213132c01c34c = L.marker(
+                [34.0466, -118.259],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_c9a581b2689dbfe72e287f188e0befbf = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_59bc2fbafef9cd9b0f66b40607cb9ea6 = $(`<div id="html_59bc2fbafef9cd9b0f66b40607cb9ea6" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-20, Crime: THEFT PLAIN - PETTY ($950 & UNDER)</div>`)[0];
+                popup_c9a581b2689dbfe72e287f188e0befbf.setContent(html_59bc2fbafef9cd9b0f66b40607cb9ea6);
+            
+        
+
+        marker_6673c4f4432c90ff15b213132c01c34c.bindPopup(popup_c9a581b2689dbfe72e287f188e0befbf)
+        ;
+
+        
+    
+    
+            var marker_b56332b5140f2c5c913d8f6516068019 = L.marker(
+                [34.043, -118.242],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_7f8d0349a6101f06b577bf171504a253 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d757f7edf92e3570bd6569d2d73f8b50 = $(`<div id="html_d757f7edf92e3570bd6569d2d73f8b50" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-18, Crime: THEFT PLAIN - PETTY ($950 & UNDER)</div>`)[0];
+                popup_7f8d0349a6101f06b577bf171504a253.setContent(html_d757f7edf92e3570bd6569d2d73f8b50);
+            
+        
+
+        marker_b56332b5140f2c5c913d8f6516068019.bindPopup(popup_7f8d0349a6101f06b577bf171504a253)
+        ;
+
+        
+    
+    
+            var marker_83791500264ec3ccd1b6db0d214835e1 = L.marker(
+                [34.0462, -118.2585],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_85a31cd82e611b5230208b88d486eb7e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_90b76123d0bb7c7d962ddb816232c973 = $(`<div id="html_90b76123d0bb7c7d962ddb816232c973" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-15, Crime: THEFT-GRAND ($950.01 & OVER)EXCPT,GUNS,FOWL,LIVESTK,PROD</div>`)[0];
+                popup_85a31cd82e611b5230208b88d486eb7e.setContent(html_90b76123d0bb7c7d962ddb816232c973);
+            
+        
+
+        marker_83791500264ec3ccd1b6db0d214835e1.bindPopup(popup_85a31cd82e611b5230208b88d486eb7e)
+        ;
+
+        
+    
+    
+            var marker_def2cdeabda73e31ecfe7496fb443003 = L.marker(
+                [34.048, -118.2577],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_3d69e427754b9e07deab153430d26e55 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_084ec1b832b7614743c9cbb8b7c90105 = $(`<div id="html_084ec1b832b7614743c9cbb8b7c90105" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-19, Crime: SHOPLIFTING - PETTY THEFT ($950 & UNDER)</div>`)[0];
+                popup_3d69e427754b9e07deab153430d26e55.setContent(html_084ec1b832b7614743c9cbb8b7c90105);
+            
+        
+
+        marker_def2cdeabda73e31ecfe7496fb443003.bindPopup(popup_3d69e427754b9e07deab153430d26e55)
+        ;
+
+        
+    
+    
+            var marker_7ba33dc878df0d0000ee355e86267003 = L.marker(
+                [34.0502, -118.254],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_6ff39e60df8145482a8df09b31fdaebf = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a7a4345698b49bfe08f73a7978530ef4 = $(`<div id="html_a7a4345698b49bfe08f73a7978530ef4" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-21, Crime: THEFT PLAIN - PETTY ($950 & UNDER)</div>`)[0];
+                popup_6ff39e60df8145482a8df09b31fdaebf.setContent(html_a7a4345698b49bfe08f73a7978530ef4);
+            
+        
+
+        marker_7ba33dc878df0d0000ee355e86267003.bindPopup(popup_6ff39e60df8145482a8df09b31fdaebf)
+        ;
+
+        
+    
+    
+            var marker_01d883cb6e4df4485915184a4389e9b3 = L.marker(
+                [34.0433, -118.2504],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_c829001847ffb166e0709df2f969c511 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5935495569d64f8459b04edec26bd3ac = $(`<div id="html_5935495569d64f8459b04edec26bd3ac" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-19, Crime: THEFT-GRAND ($950.01 & OVER)EXCPT,GUNS,FOWL,LIVESTK,PROD</div>`)[0];
+                popup_c829001847ffb166e0709df2f969c511.setContent(html_5935495569d64f8459b04edec26bd3ac);
+            
+        
+
+        marker_01d883cb6e4df4485915184a4389e9b3.bindPopup(popup_c829001847ffb166e0709df2f969c511)
+        ;
+
+        
+    
+    
+            var marker_eb7b6514bb6352eda2b4c7d1ae0adf87 = L.marker(
+                [34.0563, -118.2374],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_efdcd4983752b6c9c9d4be577c593e41 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ba6bd9856a4c7eec40b6459f9866fe14 = $(`<div id="html_ba6bd9856a4c7eec40b6459f9866fe14" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-02, Crime: THEFT-GRAND ($950.01 & OVER)EXCPT,GUNS,FOWL,LIVESTK,PROD</div>`)[0];
+                popup_efdcd4983752b6c9c9d4be577c593e41.setContent(html_ba6bd9856a4c7eec40b6459f9866fe14);
+            
+        
+
+        marker_eb7b6514bb6352eda2b4c7d1ae0adf87.bindPopup(popup_efdcd4983752b6c9c9d4be577c593e41)
+        ;
+
+        
+    
+    
+            var marker_80f6fc7612a464ea7980153a3b2a04c7 = L.marker(
+                [34.0563, -118.2374],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_2d842647b4e3b1ef5f0dd8be3c0a3a56 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_338938b4228d0300a756763a6e55c662 = $(`<div id="html_338938b4228d0300a756763a6e55c662" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-16, Crime: THEFT PLAIN - PETTY ($950 & UNDER)</div>`)[0];
+                popup_2d842647b4e3b1ef5f0dd8be3c0a3a56.setContent(html_338938b4228d0300a756763a6e55c662);
+            
+        
+
+        marker_80f6fc7612a464ea7980153a3b2a04c7.bindPopup(popup_2d842647b4e3b1ef5f0dd8be3c0a3a56)
+        ;
+
+        
+    
+    
+            var marker_8ae2a1ae32ee3ed100a484c4c3a092d2 = L.marker(
+                [34.0022, -118.4255],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_11aae83727c125a90f346e878953f738 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2cf62cdf56b007b116d90224561ec4d4 = $(`<div id="html_2cf62cdf56b007b116d90224561ec4d4" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-18, Crime: THEFT FROM MOTOR VEHICLE - PETTY ($950 & UNDER)</div>`)[0];
+                popup_11aae83727c125a90f346e878953f738.setContent(html_2cf62cdf56b007b116d90224561ec4d4);
+            
+        
+
+        marker_8ae2a1ae32ee3ed100a484c4c3a092d2.bindPopup(popup_11aae83727c125a90f346e878953f738)
+        ;
+
+        
+    
+    
+            var marker_6a022ce0add375efb2bc1e223c758fa5 = L.marker(
+                [34.0488, -118.2553],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_c62e079ce9625376f93aff3707faea61 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7a25dbc1b51f968f6d121bbcd7de9f0e = $(`<div id="html_7a25dbc1b51f968f6d121bbcd7de9f0e" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-20, Crime: THEFT, PERSON</div>`)[0];
+                popup_c62e079ce9625376f93aff3707faea61.setContent(html_7a25dbc1b51f968f6d121bbcd7de9f0e);
+            
+        
+
+        marker_6a022ce0add375efb2bc1e223c758fa5.bindPopup(popup_c62e079ce9625376f93aff3707faea61)
+        ;
+
+        
+    
+    
+            var marker_2fdc6e03e855581207255e4ae332f0c4 = L.marker(
+                [34.0472, -118.2381],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_54fbd250aa5b44d3542883f60eeaa0a7 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e2692f4e87bd8460931da065ba8bdfb3 = $(`<div id="html_e2692f4e87bd8460931da065ba8bdfb3" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-21, Crime: THEFT FROM MOTOR VEHICLE - PETTY ($950 & UNDER)</div>`)[0];
+                popup_54fbd250aa5b44d3542883f60eeaa0a7.setContent(html_e2692f4e87bd8460931da065ba8bdfb3);
+            
+        
+
+        marker_2fdc6e03e855581207255e4ae332f0c4.bindPopup(popup_54fbd250aa5b44d3542883f60eeaa0a7)
+        ;
+
+        
+    
+    
+            var marker_d4af654aa0ce33217c7dd98ffa405187 = L.marker(
+                [34.0552, -118.2322],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_191d1001eba331df1c6e82c19cce8c3d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_26c68e609d4c85d491602bcccf73ea33 = $(`<div id="html_26c68e609d4c85d491602bcccf73ea33" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-22, Crime: THEFT PLAIN - PETTY ($950 & UNDER)</div>`)[0];
+                popup_191d1001eba331df1c6e82c19cce8c3d.setContent(html_26c68e609d4c85d491602bcccf73ea33);
+            
+        
+
+        marker_d4af654aa0ce33217c7dd98ffa405187.bindPopup(popup_191d1001eba331df1c6e82c19cce8c3d)
+        ;
+
+        
+    
+    
+            var marker_6c61c59ecbbd7129ea80a179f8adea40 = L.marker(
+                [34.0495, -118.2494],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_5833eaf9bbcca0358759ab605ed33ca4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_00635fa41b227cd0c9c5ccc68e1e932b = $(`<div id="html_00635fa41b227cd0c9c5ccc68e1e932b" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-21, Crime: THEFT PLAIN - PETTY ($950 & UNDER)</div>`)[0];
+                popup_5833eaf9bbcca0358759ab605ed33ca4.setContent(html_00635fa41b227cd0c9c5ccc68e1e932b);
+            
+        
+
+        marker_6c61c59ecbbd7129ea80a179f8adea40.bindPopup(popup_5833eaf9bbcca0358759ab605ed33ca4)
+        ;
+
+        
+    
+    
+            var marker_62d06b126d908889f539ed130096193d = L.marker(
+                [34.046, -118.2509],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_78f854b37c9efe19a28e44610b0b749a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ed1ec422468a9024953e48c78ca9d553 = $(`<div id="html_ed1ec422468a9024953e48c78ca9d553" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-11, Crime: THEFT PLAIN - PETTY ($950 & UNDER)</div>`)[0];
+                popup_78f854b37c9efe19a28e44610b0b749a.setContent(html_ed1ec422468a9024953e48c78ca9d553);
+            
+        
+
+        marker_62d06b126d908889f539ed130096193d.bindPopup(popup_78f854b37c9efe19a28e44610b0b749a)
+        ;
+
+        
+    
+    
+            var marker_07e4fe5befd90f5870aa080b4d663756 = L.marker(
+                [34.0483, -118.2631],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_cffc20eae329405949688f5860d5ada5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f7a6ca2bf68ee431841155db707eb6ae = $(`<div id="html_f7a6ca2bf68ee431841155db707eb6ae" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-11, Crime: SHOPLIFTING-GRAND THEFT ($950.01 & OVER)</div>`)[0];
+                popup_cffc20eae329405949688f5860d5ada5.setContent(html_f7a6ca2bf68ee431841155db707eb6ae);
+            
+        
+
+        marker_07e4fe5befd90f5870aa080b4d663756.bindPopup(popup_cffc20eae329405949688f5860d5ada5)
+        ;
+
+        
+    
+    
+            var marker_784806e00f0afa5b861608d81805ada6 = L.marker(
+                [34.0387, -118.2335],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_39e373e6cf9b849bb692f219a090bf59 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c2cf6bc9fbb4a1b6aa879bc773f63237 = $(`<div id="html_c2cf6bc9fbb4a1b6aa879bc773f63237" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-21, Crime: THEFT FROM MOTOR VEHICLE - PETTY ($950 & UNDER)</div>`)[0];
+                popup_39e373e6cf9b849bb692f219a090bf59.setContent(html_c2cf6bc9fbb4a1b6aa879bc773f63237);
+            
+        
+
+        marker_784806e00f0afa5b861608d81805ada6.bindPopup(popup_39e373e6cf9b849bb692f219a090bf59)
+        ;
+
+        
+    
+    
+            var marker_ad352622ecdf9079495bae977cf3652e = L.marker(
+                [34.0686, -118.2266],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_fd93122971976e92ed7bab93d7a0d5ae = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1ef91628651ba0fdb99d32e8d96aa7d3 = $(`<div id="html_1ef91628651ba0fdb99d32e8d96aa7d3" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-21, Crime: THEFT FROM MOTOR VEHICLE - PETTY ($950 & UNDER)</div>`)[0];
+                popup_fd93122971976e92ed7bab93d7a0d5ae.setContent(html_1ef91628651ba0fdb99d32e8d96aa7d3);
+            
+        
+
+        marker_ad352622ecdf9079495bae977cf3652e.bindPopup(popup_fd93122971976e92ed7bab93d7a0d5ae)
+        ;
+
+        
+    
+    
+            var marker_ae598bd85a21f75223a6389d39886d1b = L.marker(
+                [34.0437, -118.2582],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_893d33f75f7eb012a83ba3ee71049f51 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7e1839af26ab93b150f1d0ebdcbd0a72 = $(`<div id="html_7e1839af26ab93b150f1d0ebdcbd0a72" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-20, Crime: THEFT FROM MOTOR VEHICLE - PETTY ($950 & UNDER)</div>`)[0];
+                popup_893d33f75f7eb012a83ba3ee71049f51.setContent(html_7e1839af26ab93b150f1d0ebdcbd0a72);
+            
+        
+
+        marker_ae598bd85a21f75223a6389d39886d1b.bindPopup(popup_893d33f75f7eb012a83ba3ee71049f51)
+        ;
+
+        
+    
+    
+            var marker_50576e4cac9e05da96938b05f19756da = L.marker(
+                [34.0503, -118.2506],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_09366a5f95df4c08f8f5cf736a1414c7 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8c88980f5ddaea4c1b4f8f8b6ce3497d = $(`<div id="html_8c88980f5ddaea4c1b4f8f8b6ce3497d" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-22, Crime: THEFT-GRAND ($950.01 & OVER)EXCPT,GUNS,FOWL,LIVESTK,PROD</div>`)[0];
+                popup_09366a5f95df4c08f8f5cf736a1414c7.setContent(html_8c88980f5ddaea4c1b4f8f8b6ce3497d);
+            
+        
+
+        marker_50576e4cac9e05da96938b05f19756da.bindPopup(popup_09366a5f95df4c08f8f5cf736a1414c7)
+        ;
+
+        
+    
+    
+            var marker_ddf60d22ff60a65ec737fb06bc3111e1 = L.marker(
+                [34.0648, -118.2696],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_49f7792c2cb44a711ce1c7cbd9df1ef5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7f177dfcebc4774ec0b63811ff6b2997 = $(`<div id="html_7f177dfcebc4774ec0b63811ff6b2997" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-08, Crime: THEFT FROM MOTOR VEHICLE - PETTY ($950 & UNDER)</div>`)[0];
+                popup_49f7792c2cb44a711ce1c7cbd9df1ef5.setContent(html_7f177dfcebc4774ec0b63811ff6b2997);
+            
+        
+
+        marker_ddf60d22ff60a65ec737fb06bc3111e1.bindPopup(popup_49f7792c2cb44a711ce1c7cbd9df1ef5)
+        ;
+
+        
+    
+    
+            var marker_a01bb6c974b0c26c79041c7b1170221a = L.marker(
+                [34.048, -118.2577],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_c52329c7e30e2ec30070e4ec42bcc3af = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_fb85ca3dade19fae9df3105e62825f6b = $(`<div id="html_fb85ca3dade19fae9df3105e62825f6b" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-22, Crime: SHOPLIFTING - PETTY THEFT ($950 & UNDER)</div>`)[0];
+                popup_c52329c7e30e2ec30070e4ec42bcc3af.setContent(html_fb85ca3dade19fae9df3105e62825f6b);
+            
+        
+
+        marker_a01bb6c974b0c26c79041c7b1170221a.bindPopup(popup_c52329c7e30e2ec30070e4ec42bcc3af)
+        ;
+
+        
+    
+    
+            var marker_d58db9dc408f04c1ce9e3cbbf82c8731 = L.marker(
+                [34.0423, -118.2452],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_dc71ff8dff489bf5e1a4272ef970a888 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e846179c3dd5df530fc6cd84453128a8 = $(`<div id="html_e846179c3dd5df530fc6cd84453128a8" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-22, Crime: THEFT FROM MOTOR VEHICLE - PETTY ($950 & UNDER)</div>`)[0];
+                popup_dc71ff8dff489bf5e1a4272ef970a888.setContent(html_e846179c3dd5df530fc6cd84453128a8);
+            
+        
+
+        marker_d58db9dc408f04c1ce9e3cbbf82c8731.bindPopup(popup_dc71ff8dff489bf5e1a4272ef970a888)
+        ;
+
+        
+    
+    
+            var marker_3e9ce5d18d4572eade2778a7c811ea99 = L.marker(
+                [34.0483, -118.2631],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_5faf98c5fdb352605b85568494bccdfc = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_35f977529fe835baeaea831d84f0a0b5 = $(`<div id="html_35f977529fe835baeaea831d84f0a0b5" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-21, Crime: SHOPLIFTING - PETTY THEFT ($950 & UNDER)</div>`)[0];
+                popup_5faf98c5fdb352605b85568494bccdfc.setContent(html_35f977529fe835baeaea831d84f0a0b5);
+            
+        
+
+        marker_3e9ce5d18d4572eade2778a7c811ea99.bindPopup(popup_5faf98c5fdb352605b85568494bccdfc)
+        ;
+
+        
+    
+    
+            var marker_4d845b11cdcfe14e096902cd231e9fb7 = L.marker(
+                [34.0473, -118.2601],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_7b8920f83b5a13ae1217f0dc609d3abe = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_689a09d5382d014b883de2f568930377 = $(`<div id="html_689a09d5382d014b883de2f568930377" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-17, Crime: THEFT PLAIN - PETTY ($950 & UNDER)</div>`)[0];
+                popup_7b8920f83b5a13ae1217f0dc609d3abe.setContent(html_689a09d5382d014b883de2f568930377);
+            
+        
+
+        marker_4d845b11cdcfe14e096902cd231e9fb7.bindPopup(popup_7b8920f83b5a13ae1217f0dc609d3abe)
+        ;
+
+        
+    
+    
+            var marker_856e9f937599a77b6d1df8108d1b99fd = L.marker(
+                [34.0591, -118.2412],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_87bcd312c0db5cdfc95c1dc6d3ff3ef9 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_59b9788374726105f7c2166db554f979 = $(`<div id="html_59b9788374726105f7c2166db554f979" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-22, Crime: THEFT PLAIN - PETTY ($950 & UNDER)</div>`)[0];
+                popup_87bcd312c0db5cdfc95c1dc6d3ff3ef9.setContent(html_59b9788374726105f7c2166db554f979);
+            
+        
+
+        marker_856e9f937599a77b6d1df8108d1b99fd.bindPopup(popup_87bcd312c0db5cdfc95c1dc6d3ff3ef9)
+        ;
+
+        
+    
+    
+            var marker_934e5d4928e3715bbbc147d5f991c47c = L.marker(
+                [34.0604, -118.2393],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_2e337df6dbbe9ce8ec74114f36069e52 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d2a46d6ec0e060bcd5537107a5f9f749 = $(`<div id="html_d2a46d6ec0e060bcd5537107a5f9f749" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-23, Crime: THEFT, PERSON</div>`)[0];
+                popup_2e337df6dbbe9ce8ec74114f36069e52.setContent(html_d2a46d6ec0e060bcd5537107a5f9f749);
+            
+        
+
+        marker_934e5d4928e3715bbbc147d5f991c47c.bindPopup(popup_2e337df6dbbe9ce8ec74114f36069e52)
+        ;
+
+        
+    
+    
+            var marker_e0acb063a59fa033f11461abd7c640d0 = L.marker(
+                [34.0499, -118.2614],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_312ddc1cac17e9b460251ef4891b62ca = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d6e2503d56fe756b420785cc283f19b6 = $(`<div id="html_d6e2503d56fe756b420785cc283f19b6" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-21, Crime: THEFT PLAIN - PETTY ($950 & UNDER)</div>`)[0];
+                popup_312ddc1cac17e9b460251ef4891b62ca.setContent(html_d6e2503d56fe756b420785cc283f19b6);
+            
+        
+
+        marker_e0acb063a59fa033f11461abd7c640d0.bindPopup(popup_312ddc1cac17e9b460251ef4891b62ca)
+        ;
+
+        
+    
+    
+            var marker_e4f6ce557828d3e49ac6409452be5db0 = L.marker(
+                [34.0382, -118.2316],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_e7e6b32e77696ca5127401b0583ef934 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a1bbdceae46d550725430575f5fe7bde = $(`<div id="html_a1bbdceae46d550725430575f5fe7bde" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-23, Crime: SHOPLIFTING-GRAND THEFT ($950.01 & OVER)</div>`)[0];
+                popup_e7e6b32e77696ca5127401b0583ef934.setContent(html_a1bbdceae46d550725430575f5fe7bde);
+            
+        
+
+        marker_e4f6ce557828d3e49ac6409452be5db0.bindPopup(popup_e7e6b32e77696ca5127401b0583ef934)
+        ;
+
+        
+    
+    
+            var marker_6a39abf0697b52ab547d2c45b20d587d = L.marker(
+                [34.0473, -118.2566],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_d5ee1b53b06fae1783f95d3d84bc8622 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_93a19e44016049829e11121664774f1d = $(`<div id="html_93a19e44016049829e11121664774f1d" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-23, Crime: THEFT, PERSON</div>`)[0];
+                popup_d5ee1b53b06fae1783f95d3d84bc8622.setContent(html_93a19e44016049829e11121664774f1d);
+            
+        
+
+        marker_6a39abf0697b52ab547d2c45b20d587d.bindPopup(popup_d5ee1b53b06fae1783f95d3d84bc8622)
+        ;
+
+        
+    
+    
+            var marker_d3629c876b9e11f4b17f532f608e6ba2 = L.marker(
+                [34.0421, -118.2469],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_75862a2292138069fc0152ef8f8a5db3 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2e6a59eca2fcefc00fb753626618a002 = $(`<div id="html_2e6a59eca2fcefc00fb753626618a002" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-24, Crime: THEFT PLAIN - PETTY ($950 & UNDER)</div>`)[0];
+                popup_75862a2292138069fc0152ef8f8a5db3.setContent(html_2e6a59eca2fcefc00fb753626618a002);
+            
+        
+
+        marker_d3629c876b9e11f4b17f532f608e6ba2.bindPopup(popup_75862a2292138069fc0152ef8f8a5db3)
+        ;
+
+        
+    
+    
+            var marker_dcf4f3909c25823d7a8198193137a316 = L.marker(
+                [34.0423, -118.2452],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_a5f2d266275ccaf366877947fc92b4e2 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e2095efc977ddbda7c543d5ff41facc1 = $(`<div id="html_e2095efc977ddbda7c543d5ff41facc1" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-24, Crime: THEFT PLAIN - PETTY ($950 & UNDER)</div>`)[0];
+                popup_a5f2d266275ccaf366877947fc92b4e2.setContent(html_e2095efc977ddbda7c543d5ff41facc1);
+            
+        
+
+        marker_dcf4f3909c25823d7a8198193137a316.bindPopup(popup_a5f2d266275ccaf366877947fc92b4e2)
+        ;
+
+        
+    
+    
+            var marker_cb7c283645b63a7625cbc459c3b39646 = L.marker(
+                [34.0416, -118.2398],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_cef9cf0aa225722fd8423e42bbe5b59a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d8eb5852dbf596a06238f4725b76944e = $(`<div id="html_d8eb5852dbf596a06238f4725b76944e" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-23, Crime: THEFT PLAIN - PETTY ($950 & UNDER)</div>`)[0];
+                popup_cef9cf0aa225722fd8423e42bbe5b59a.setContent(html_d8eb5852dbf596a06238f4725b76944e);
+            
+        
+
+        marker_cb7c283645b63a7625cbc459c3b39646.bindPopup(popup_cef9cf0aa225722fd8423e42bbe5b59a)
+        ;
+
+        
+    
+    
+            var marker_b681ef1dee390b26a6feaf19325a7480 = L.marker(
+                [34.0483, -118.2631],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_5bfa976d7a71b412e1055032d3f97c1e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ee4685fe33e6303c5904a7451ad3d10f = $(`<div id="html_ee4685fe33e6303c5904a7451ad3d10f" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-23, Crime: THEFT-GRAND ($950.01 & OVER)EXCPT,GUNS,FOWL,LIVESTK,PROD</div>`)[0];
+                popup_5bfa976d7a71b412e1055032d3f97c1e.setContent(html_ee4685fe33e6303c5904a7451ad3d10f);
+            
+        
+
+        marker_b681ef1dee390b26a6feaf19325a7480.bindPopup(popup_5bfa976d7a71b412e1055032d3f97c1e)
+        ;
+
+        
+    
+    
+            var marker_c257ca1913ad818da6d00d9adf7b177e = L.marker(
+                [34.051, -118.248],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_812ffac9aea2ddb1420c78d2442c521c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f9b86a74a47d46f2d6c55c838022ca88 = $(`<div id="html_f9b86a74a47d46f2d6c55c838022ca88" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-24, Crime: THEFT-GRAND ($950.01 & OVER)EXCPT,GUNS,FOWL,LIVESTK,PROD</div>`)[0];
+                popup_812ffac9aea2ddb1420c78d2442c521c.setContent(html_f9b86a74a47d46f2d6c55c838022ca88);
+            
+        
+
+        marker_c257ca1913ad818da6d00d9adf7b177e.bindPopup(popup_812ffac9aea2ddb1420c78d2442c521c)
+        ;
+
+        
+    
+    
+            var marker_17dfeea94ebaa4fdf7ffa50d5ee594c2 = L.marker(
+                [34.0382, -118.2384],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_493f29afb709c948ab4a3c74e3dc9a8a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_be7f93cda0d708d52663696ce33bccba = $(`<div id="html_be7f93cda0d708d52663696ce33bccba" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-24, Crime: THEFT-GRAND ($950.01 & OVER)EXCPT,GUNS,FOWL,LIVESTK,PROD</div>`)[0];
+                popup_493f29afb709c948ab4a3c74e3dc9a8a.setContent(html_be7f93cda0d708d52663696ce33bccba);
+            
+        
+
+        marker_17dfeea94ebaa4fdf7ffa50d5ee594c2.bindPopup(popup_493f29afb709c948ab4a3c74e3dc9a8a)
+        ;
+
+        
+    
+    
+            var marker_f163d8fd9b4ae8648264cebec710509a = L.marker(
+                [34.0439, -118.2479],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_fe157b8f2b5e1fa1029a8c7c29863e4e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_cccab380e12c464e077156001c043046 = $(`<div id="html_cccab380e12c464e077156001c043046" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-25, Crime: THEFT PLAIN - PETTY ($950 & UNDER)</div>`)[0];
+                popup_fe157b8f2b5e1fa1029a8c7c29863e4e.setContent(html_cccab380e12c464e077156001c043046);
+            
+        
+
+        marker_f163d8fd9b4ae8648264cebec710509a.bindPopup(popup_fe157b8f2b5e1fa1029a8c7c29863e4e)
+        ;
+
+        
+    
+    
+            var marker_c297fe223e9e6da01187e901452e9a65 = L.marker(
+                [34.0467, -118.247],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_d366943abdec915c452c1e12d275e179 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4355cc46111c7ac513aa96ae32bfb4ee = $(`<div id="html_4355cc46111c7ac513aa96ae32bfb4ee" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-24, Crime: SHOPLIFTING - PETTY THEFT ($950 & UNDER)</div>`)[0];
+                popup_d366943abdec915c452c1e12d275e179.setContent(html_4355cc46111c7ac513aa96ae32bfb4ee);
+            
+        
+
+        marker_c297fe223e9e6da01187e901452e9a65.bindPopup(popup_d366943abdec915c452c1e12d275e179)
+        ;
+
+        
+    
+    
+            var marker_76f68017647f791b5f72e834cc99efc1 = L.marker(
+                [34.048, -118.2577],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_29f97c131fada7ac8b32292c1655ddc7 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_94cd0212273cd3c23cc9178c8b7686e6 = $(`<div id="html_94cd0212273cd3c23cc9178c8b7686e6" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-25, Crime: SHOPLIFTING - PETTY THEFT ($950 & UNDER)</div>`)[0];
+                popup_29f97c131fada7ac8b32292c1655ddc7.setContent(html_94cd0212273cd3c23cc9178c8b7686e6);
+            
+        
+
+        marker_76f68017647f791b5f72e834cc99efc1.bindPopup(popup_29f97c131fada7ac8b32292c1655ddc7)
+        ;
+
+        
+    
+    
+            var marker_b602364bfef302f23410c851ce53bd06 = L.marker(
+                [34.048, -118.2577],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_b1dfefc134c91c5b639929f1e2b5def3 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6361b74c228b57216951b381e355cbfd = $(`<div id="html_6361b74c228b57216951b381e355cbfd" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-25, Crime: SHOPLIFTING - PETTY THEFT ($950 & UNDER)</div>`)[0];
+                popup_b1dfefc134c91c5b639929f1e2b5def3.setContent(html_6361b74c228b57216951b381e355cbfd);
+            
+        
+
+        marker_b602364bfef302f23410c851ce53bd06.bindPopup(popup_b1dfefc134c91c5b639929f1e2b5def3)
+        ;
+
+        
+    
+    
+            var marker_69f8e2b2c5007b176243c8a77a805fd3 = L.marker(
+                [34.0491, -118.2558],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_a49ad74170f9079af187b20ff3d0f271 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6c738f474d70c15c7f8f8b06af90282d = $(`<div id="html_6c738f474d70c15c7f8f8b06af90282d" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-16, Crime: THEFT PLAIN - PETTY ($950 & UNDER)</div>`)[0];
+                popup_a49ad74170f9079af187b20ff3d0f271.setContent(html_6c738f474d70c15c7f8f8b06af90282d);
+            
+        
+
+        marker_69f8e2b2c5007b176243c8a77a805fd3.bindPopup(popup_a49ad74170f9079af187b20ff3d0f271)
+        ;
+
+        
+    
+    
+            var marker_5c2424c0d1dd07149958e22911723caf = L.marker(
+                [34.0431, -118.2692],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_c9290975fa8b15d44a79f3b3610f0117 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_609e0c90172e1da47e84234c5bd5483c = $(`<div id="html_609e0c90172e1da47e84234c5bd5483c" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-25, Crime: THEFT-GRAND ($950.01 & OVER)EXCPT,GUNS,FOWL,LIVESTK,PROD</div>`)[0];
+                popup_c9290975fa8b15d44a79f3b3610f0117.setContent(html_609e0c90172e1da47e84234c5bd5483c);
+            
+        
+
+        marker_5c2424c0d1dd07149958e22911723caf.bindPopup(popup_c9290975fa8b15d44a79f3b3610f0117)
+        ;
+
+        
+    
+    
+            var marker_012f4c2ef47a2c5023b06a2d7c2716d6 = L.marker(
+                [34.0454, -118.2466],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_be2bd9d03684fc943f17755b5a1ca488 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_499fff59b2a9e09ecb815901088b1fb5 = $(`<div id="html_499fff59b2a9e09ecb815901088b1fb5" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-26, Crime: THEFT PLAIN - PETTY ($950 & UNDER)</div>`)[0];
+                popup_be2bd9d03684fc943f17755b5a1ca488.setContent(html_499fff59b2a9e09ecb815901088b1fb5);
+            
+        
+
+        marker_012f4c2ef47a2c5023b06a2d7c2716d6.bindPopup(popup_be2bd9d03684fc943f17755b5a1ca488)
+        ;
+
+        
+    
+    
+            var marker_d800b98527d7a77f4f493f2106f8d2c0 = L.marker(
+                [34.0563, -118.2374],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_eb8d45720d252c7f1660e43fd8eec6b4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_813be8eff6b439c9be779431a352ca54 = $(`<div id="html_813be8eff6b439c9be779431a352ca54" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-20, Crime: THEFT OF IDENTITY</div>`)[0];
+                popup_eb8d45720d252c7f1660e43fd8eec6b4.setContent(html_813be8eff6b439c9be779431a352ca54);
+            
+        
+
+        marker_d800b98527d7a77f4f493f2106f8d2c0.bindPopup(popup_eb8d45720d252c7f1660e43fd8eec6b4)
+        ;
+
+        
+    
+    
+            var marker_bcd684b24fd328dec237cd13f2094e11 = L.marker(
+                [34.048, -118.2577],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_f94283f63357e6d919e5f49387160fb5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_15f088830ccdafcf942973cbe60f385c = $(`<div id="html_15f088830ccdafcf942973cbe60f385c" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-26, Crime: SHOPLIFTING - PETTY THEFT ($950 & UNDER)</div>`)[0];
+                popup_f94283f63357e6d919e5f49387160fb5.setContent(html_15f088830ccdafcf942973cbe60f385c);
+            
+        
+
+        marker_bcd684b24fd328dec237cd13f2094e11.bindPopup(popup_f94283f63357e6d919e5f49387160fb5)
+        ;
+
+        
+    
+    
+            var marker_0dd689714dfef60d78c54efd697c7624 = L.marker(
+                [34.048, -118.2577],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_baa7632d2a39ed7a8c81bcee5da3fa5e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_286c6a7a52b26f05db5f3de2f7db54c1 = $(`<div id="html_286c6a7a52b26f05db5f3de2f7db54c1" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-26, Crime: SHOPLIFTING - PETTY THEFT ($950 & UNDER)</div>`)[0];
+                popup_baa7632d2a39ed7a8c81bcee5da3fa5e.setContent(html_286c6a7a52b26f05db5f3de2f7db54c1);
+            
+        
+
+        marker_0dd689714dfef60d78c54efd697c7624.bindPopup(popup_baa7632d2a39ed7a8c81bcee5da3fa5e)
+        ;
+
+        
+    
+    
+            var marker_7efe79d85e8142f3b2e22cff6133209b = L.marker(
+                [34.0431, -118.2692],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_1c0b4f6f38a65cb827362359cbb3e4c0 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a410c48f82d559c2b154fa9cd0166331 = $(`<div id="html_a410c48f82d559c2b154fa9cd0166331" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-26, Crime: THEFT-GRAND ($950.01 & OVER)EXCPT,GUNS,FOWL,LIVESTK,PROD</div>`)[0];
+                popup_1c0b4f6f38a65cb827362359cbb3e4c0.setContent(html_a410c48f82d559c2b154fa9cd0166331);
+            
+        
+
+        marker_7efe79d85e8142f3b2e22cff6133209b.bindPopup(popup_1c0b4f6f38a65cb827362359cbb3e4c0)
+        ;
+
+        
+    
+    
+            var marker_7978853287fc6255b5f28272436900a9 = L.marker(
+                [34.048, -118.2577],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_06f1b8102d468bd45e4fa9fdfe1a6ca6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_eaa9e0d97ca1929f82c6a670d7d91c40 = $(`<div id="html_eaa9e0d97ca1929f82c6a670d7d91c40" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-26, Crime: SHOPLIFTING - PETTY THEFT ($950 & UNDER)</div>`)[0];
+                popup_06f1b8102d468bd45e4fa9fdfe1a6ca6.setContent(html_eaa9e0d97ca1929f82c6a670d7d91c40);
+            
+        
+
+        marker_7978853287fc6255b5f28272436900a9.bindPopup(popup_06f1b8102d468bd45e4fa9fdfe1a6ca6)
+        ;
+
+        
+    
+    
+            var marker_ebb8c750df3ef7a9fb12da95b3c0a697 = L.marker(
+                [34.048, -118.2577],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_8f1213a14690f440c57a8e2b5b2355ea = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d8ad772e142dea05c8a5385d5892f50e = $(`<div id="html_d8ad772e142dea05c8a5385d5892f50e" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-26, Crime: SHOPLIFTING - PETTY THEFT ($950 & UNDER)</div>`)[0];
+                popup_8f1213a14690f440c57a8e2b5b2355ea.setContent(html_d8ad772e142dea05c8a5385d5892f50e);
+            
+        
+
+        marker_ebb8c750df3ef7a9fb12da95b3c0a697.bindPopup(popup_8f1213a14690f440c57a8e2b5b2355ea)
+        ;
+
+        
+    
+    
+            var marker_747041a712974ed521e2d1318a88726a = L.marker(
+                [34.0481, -118.2542],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_ba3009048fcd662aa5a62a370796d30a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c2f313c9acb70c03e8538153e1c8bfec = $(`<div id="html_c2f313c9acb70c03e8538153e1c8bfec" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-23, Crime: THEFT-GRAND ($950.01 & OVER)EXCPT,GUNS,FOWL,LIVESTK,PROD</div>`)[0];
+                popup_ba3009048fcd662aa5a62a370796d30a.setContent(html_c2f313c9acb70c03e8538153e1c8bfec);
+            
+        
+
+        marker_747041a712974ed521e2d1318a88726a.bindPopup(popup_ba3009048fcd662aa5a62a370796d30a)
+        ;
+
+        
+    
+    
+            var marker_be9e3ac3ecf58bfa28e683cf64d66747 = L.marker(
+                [34.046, -118.2509],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_fcaf94888656c80c63e9610730dbe875 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a941e5224ce9755eca881c993ee2f192 = $(`<div id="html_a941e5224ce9755eca881c993ee2f192" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-24, Crime: THEFT-GRAND ($950.01 & OVER)EXCPT,GUNS,FOWL,LIVESTK,PROD</div>`)[0];
+                popup_fcaf94888656c80c63e9610730dbe875.setContent(html_a941e5224ce9755eca881c993ee2f192);
+            
+        
+
+        marker_be9e3ac3ecf58bfa28e683cf64d66747.bindPopup(popup_fcaf94888656c80c63e9610730dbe875)
+        ;
+
+        
+    
+    
+            var marker_1c69fab85051e69d63b2c9622c6b6742 = L.marker(
+                [34.0431, -118.2692],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_371cdec7d365cfd0e819eed01cf47dec = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_35db49d296e0a9d6aae9370f548d71f2 = $(`<div id="html_35db49d296e0a9d6aae9370f548d71f2" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-05, Crime: THEFT-GRAND ($950.01 & OVER)EXCPT,GUNS,FOWL,LIVESTK,PROD</div>`)[0];
+                popup_371cdec7d365cfd0e819eed01cf47dec.setContent(html_35db49d296e0a9d6aae9370f548d71f2);
+            
+        
+
+        marker_1c69fab85051e69d63b2c9622c6b6742.bindPopup(popup_371cdec7d365cfd0e819eed01cf47dec)
+        ;
+
+        
+    
+    
+            var marker_759d2b09f37f5dadc468cbd207eca902 = L.marker(
+                [34.0433, -118.2504],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_229d815a06c6550966a0d9d827f84d75 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1cefb3f1dfe0734ed27c2f2a53abea8b = $(`<div id="html_1cefb3f1dfe0734ed27c2f2a53abea8b" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-19, Crime: THEFT PLAIN - PETTY ($950 & UNDER)</div>`)[0];
+                popup_229d815a06c6550966a0d9d827f84d75.setContent(html_1cefb3f1dfe0734ed27c2f2a53abea8b);
+            
+        
+
+        marker_759d2b09f37f5dadc468cbd207eca902.bindPopup(popup_229d815a06c6550966a0d9d827f84d75)
+        ;
+
+        
+    
+    
+            var marker_2eaedbaff6f1b5b337611c2f28ec64b7 = L.marker(
+                [34.045, -118.2628],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_28c4c45e1b45b3c913c7762817ec272e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1fc26f9063d38e9cc0562d1808e09b7c = $(`<div id="html_1fc26f9063d38e9cc0562d1808e09b7c" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-26, Crime: THEFT PLAIN - PETTY ($950 & UNDER)</div>`)[0];
+                popup_28c4c45e1b45b3c913c7762817ec272e.setContent(html_1fc26f9063d38e9cc0562d1808e09b7c);
+            
+        
+
+        marker_2eaedbaff6f1b5b337611c2f28ec64b7.bindPopup(popup_28c4c45e1b45b3c913c7762817ec272e)
+        ;
+
+        
+    
+    
+            var marker_b462ce60b778e339a8ccf68f6b683e3d = L.marker(
+                [34.0445, -118.2523],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_2f3d0ae1f5205fed17bc424f849906d4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_789724717017b5b9b923348ceb82e81c = $(`<div id="html_789724717017b5b9b923348ceb82e81c" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-20, Crime: THEFT PLAIN - PETTY ($950 & UNDER)</div>`)[0];
+                popup_2f3d0ae1f5205fed17bc424f849906d4.setContent(html_789724717017b5b9b923348ceb82e81c);
+            
+        
+
+        marker_b462ce60b778e339a8ccf68f6b683e3d.bindPopup(popup_2f3d0ae1f5205fed17bc424f849906d4)
+        ;
+
+        
+    
+    
+            var marker_1281588797cd4d695d52f87d068dea6e = L.marker(
+                [34.051, -118.2445],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_ee6b3a9835b32b9dc0f7977776aea7b7 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6d95ad1e06fb241d89d07eb3833f39a9 = $(`<div id="html_6d95ad1e06fb241d89d07eb3833f39a9" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-20, Crime: BUNCO, PETTY THEFT</div>`)[0];
+                popup_ee6b3a9835b32b9dc0f7977776aea7b7.setContent(html_6d95ad1e06fb241d89d07eb3833f39a9);
+            
+        
+
+        marker_1281588797cd4d695d52f87d068dea6e.bindPopup(popup_ee6b3a9835b32b9dc0f7977776aea7b7)
+        ;
+
+        
+    
+    
+            var marker_b140ee2feeb0dcd917f84f681604387f = L.marker(
+                [34.0388, -118.2574],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_8ffaff9271eb60c52219b726c262d528 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0a92c83bdff50c99e3b34925594051c5 = $(`<div id="html_0a92c83bdff50c99e3b34925594051c5" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-26, Crime: BUNCO, GRAND THEFT</div>`)[0];
+                popup_8ffaff9271eb60c52219b726c262d528.setContent(html_0a92c83bdff50c99e3b34925594051c5);
+            
+        
+
+        marker_b140ee2feeb0dcd917f84f681604387f.bindPopup(popup_8ffaff9271eb60c52219b726c262d528)
+        ;
+
+        
+    
+    
+            var marker_a9343650d0419786b287fd5f9f92059b = L.marker(
+                [34.0582, -118.2387],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_5c7747252262d31b36730d21b642ad31 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0b8c5fe3fbf6e31331bdea87255c0209 = $(`<div id="html_0b8c5fe3fbf6e31331bdea87255c0209" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-26, Crime: THEFT-GRAND ($950.01 & OVER)EXCPT,GUNS,FOWL,LIVESTK,PROD</div>`)[0];
+                popup_5c7747252262d31b36730d21b642ad31.setContent(html_0b8c5fe3fbf6e31331bdea87255c0209);
+            
+        
+
+        marker_a9343650d0419786b287fd5f9f92059b.bindPopup(popup_5c7747252262d31b36730d21b642ad31)
+        ;
+
+        
+    
+    
+            var marker_416eca6cf4f466aff42231087f267013 = L.marker(
+                [34.0467, -118.247],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_e5d8db3ee69ff67496aca357261cc391 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d877f36cb4dba997f90279304a945005 = $(`<div id="html_d877f36cb4dba997f90279304a945005" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-27, Crime: SHOPLIFTING - PETTY THEFT ($950 & UNDER)</div>`)[0];
+                popup_e5d8db3ee69ff67496aca357261cc391.setContent(html_d877f36cb4dba997f90279304a945005);
+            
+        
+
+        marker_416eca6cf4f466aff42231087f267013.bindPopup(popup_e5d8db3ee69ff67496aca357261cc391)
+        ;
+
+        
+    
+    
+            var marker_3543038d8d6a27511ccd2f7578ddc78a = L.marker(
+                [34.0421, -118.2469],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_8c5f54ff0d17bf843b5fed078125717a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2e51966cfd41eb445d2c7b9849e2c8c7 = $(`<div id="html_2e51966cfd41eb445d2c7b9849e2c8c7" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-27, Crime: THEFT PLAIN - PETTY ($950 & UNDER)</div>`)[0];
+                popup_8c5f54ff0d17bf843b5fed078125717a.setContent(html_2e51966cfd41eb445d2c7b9849e2c8c7);
+            
+        
+
+        marker_3543038d8d6a27511ccd2f7578ddc78a.bindPopup(popup_8c5f54ff0d17bf843b5fed078125717a)
+        ;
+
+        
+    
+    
+            var marker_a4cfe2f98edc1f6fc1bf655f97d46d2c = L.marker(
+                [34.048, -118.2577],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_2896248166e4b5fe8631b81101c4dceb = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8a20d8aedf3754e6452bfd173166fafc = $(`<div id="html_8a20d8aedf3754e6452bfd173166fafc" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-27, Crime: SHOPLIFTING - PETTY THEFT ($950 & UNDER)</div>`)[0];
+                popup_2896248166e4b5fe8631b81101c4dceb.setContent(html_8a20d8aedf3754e6452bfd173166fafc);
+            
+        
+
+        marker_a4cfe2f98edc1f6fc1bf655f97d46d2c.bindPopup(popup_2896248166e4b5fe8631b81101c4dceb)
+        ;
+
+        
+    
+    
+            var marker_a500b9adb9889bc99c2151375a2fb145 = L.marker(
+                [34.0381, -118.2629],
+                {}
+            ).addTo(map_8c260f1ac2d43b3e128bc745c0d25f56);
+        
+    
+        var popup_d2cb9b416cbaea8c8ead28f708096766 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_504df91e37dc4748451e87c1c2838bb5 = $(`<div id="html_504df91e37dc4748451e87c1c2838bb5" style="width: 100.0%; height: 100.0%;">Date Occ: 2020-01-27, Crime: THEFT PLAIN - PETTY ($950 & UNDER)</div>`)[0];
+                popup_d2cb9b416cbaea8c8ead28f708096766.setContent(html_504df91e37dc4748451e87c1c2838bb5);
+            
+        
+
+        marker_a500b9adb9889bc99c2151375a2fb145.bindPopup(popup_d2cb9b416cbaea8c8ead28f708096766)
+        ;
+
+        
+    
+</script>
+</html>
