@@ -299,6 +299,38 @@ def insert_data(data: CrimeDataIn):
     insert_crime_data(data)
     return {"message": "Data inserted successfully"}
 
+
+def insert_evidence_data(data):
+    try:
+        conn = psycopg2.connect(
+            host="localhost",
+            database="createDB",
+            user="postgres",
+            password="2113"
+        )
+        cur = conn.cursor()
+        cur.execute("""
+            INSERT INTO evidence (evidence_id, date_acquired, case_id, weapon_desc)
+            VALUES (%s, %s, %s, %s);
+        """, (data.evidence_id, data.date_acquired, data.case_id, data.weapon_desc))
+        conn.commit()
+        conn.close()
+    except psycopg2.Error as e:
+        raise HTTPException(status_code=500, detail=f"Database Error: {e}")
+
+# Model for evidence data input
+class EvidenceIn(BaseModel):
+    evidence_id: int
+    date_acquired: str
+    case_id: int
+    weapon_desc: str
+
+# Endpoint to insert evidence data
+@app.post("/insert-evidence")
+def insert_evidence(data: EvidenceIn):
+    insert_evidence_data(data)
+    return {"message": "Evidence data inserted successfully"}
+
 class CrimeUpdate(BaseModel):
     date_rptd: str = None
     date_occ: str = None
@@ -376,16 +408,18 @@ def delete_data(case_id: int):
         )
         cur = conn.cursor()
 
-        # Generate the SQL delete query
-        delete_query = f"DELETE FROM crime_data WHERE case_id = {case_id}"
+        # Generate the SQL delete queries for all tables
+        tables = ["crime_data", "evidence", "investigator", "suspect", "witness"]
+        for table in tables:
+            delete_query = f"DELETE FROM {table} WHERE case_id = {case_id}"
+            cur.execute(delete_query)
 
-        # Execute the delete query
-        cur.execute(delete_query)
         conn.commit()
         conn.close()
     except psycopg2.Error as e:
         # Log the error or handle it appropriately
         raise HTTPException(status_code=500, detail=f"Database Error: {e}")
+
 
 # FastAPI instance
 
@@ -395,3 +429,159 @@ def delete_data(case_id: int):
 def delete_crime_data(case_id: int):
     delete_data(case_id)
     return {"message": "Data deleted successfully"}
+
+
+
+class ColumnDetail(BaseModel):
+    name: str
+    data_type: str
+    is_primary: bool
+    is_foreign: bool
+    foreign_table: str = None
+    foreign_column: str = None
+
+class TableDescription(BaseModel):
+    table: str
+    description: str
+    columns: list[ColumnDetail]
+
+def fetch_table_description(table: str):
+    columns_query = f"""
+        SELECT 
+            c.column_name, 
+            c.data_type, 
+            tc.constraint_type,
+            kcu.table_name AS foreign_table,
+            kcu.column_name AS foreign_column
+        FROM information_schema.columns c
+        LEFT JOIN information_schema.key_column_usage kcu
+            ON c.column_name = kcu.column_name AND c.table_name = kcu.table_name
+        LEFT JOIN information_schema.table_constraints tc
+            ON tc.constraint_name = kcu.constraint_name AND tc.table_name = c.table_name
+        WHERE c.table_name = '{table}'
+        ORDER BY c.ordinal_position;
+    """
+    rows = retrieve_data(columns_query)
+    columns = []
+    for row in rows:
+        name, data_type, constraint_type, foreign_table, foreign_column = row
+        is_primary = constraint_type == 'PRIMARY KEY'
+        is_foreign = constraint_type == 'FOREIGN KEY'
+        # Handle case_id as primary key in crime_data and as foreign key in other tables
+        if name == 'case_id':
+            if table == 'crime_data':
+                is_primary = True
+            else:
+                is_foreign = True
+                foreign_table = 'crime_data'
+                foreign_column = 'case_id'
+        columns.append(ColumnDetail(
+            name=name,
+            data_type=data_type,
+            is_primary=is_primary,
+            is_foreign=is_foreign,
+            foreign_table=foreign_table or '',
+            foreign_column=foreign_column or ''
+        ))
+    return columns
+
+@app.get("/table-descriptions", response_model=list[TableDescription])
+async def get_table_descriptions():
+    table_descriptions = [
+        {
+            "table": "crime_data",
+            "description": "This table contains information about reported crimes, including the date reported, date occurred, crime description, location, weapon used, latitude, longitude, investigator ID, and case ID.",
+            "columns": fetch_table_description("crime_data")
+        },
+        {
+            "table": "evidence",
+            "description": "This table stores details about the evidence acquired for cases, including the date acquired, case ID, and weapon description.",
+            "columns": fetch_table_description("evidence")
+        },
+        {
+            "table": "investigator",
+            "description": "This table lists the investigators, including their name, date of birth, department, and associated case ID.",
+            "columns": fetch_table_description("investigator")
+        },
+        {
+            "table": "suspect",
+            "description": "This table contains information about suspects, including their name, date of birth, and associated case ID.",
+            "columns": fetch_table_description("suspect")
+        },
+        {
+            "table": "witness",
+            "description": "This table records information about witnesses, including their name, date of birth, and associated case ID.",
+            "columns": fetch_table_description("witness")
+        }
+    ]
+    return table_descriptions
+
+
+class CrimeData(BaseModel):
+    date_rptd: str
+    date_occ: str
+    crm_desc: str
+    location: str
+    weapon_desc: str
+    lat: float
+    lon: float
+    investigator_id: int
+    case_id: int
+
+class Evidence(BaseModel):
+    evidence_id: int
+    date_acquired: str
+    case_id: int
+    weapon_desc: str
+
+class Investigator(BaseModel):
+    investigator_id: int
+    name: str
+    date_of_birth: str
+    department: str
+    case_id: int
+
+class Suspect(BaseModel):
+    suspect_id: int
+    name: str
+    dob: str
+    case_id: int
+
+class Witness(BaseModel):
+    witness_id: int
+    name: str
+    dob: str
+    case_id: int
+
+def insert_data(table, data):
+    try:
+        conn = psycopg2.connect(
+            host="localhost",
+            database="createDB",
+            user="postgres",
+            password="2113"
+        )
+        cur = conn.cursor()
+        columns = ', '.join(data.keys())
+        values = ', '.join([f"'{v}'" if isinstance(v, str) else str(v) for v in data.values()])
+        cur.execute(f"INSERT INTO {table} ({columns}) VALUES ({values});")
+        conn.commit()
+        conn.close()
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Failed to insert data into {table}: {str(e)}")
+
+@app.post("/insert")
+async def insert_data_into_tables(crime_data: CrimeData, evidence: Evidence, investigator: Investigator, suspect: Suspect, witness: Witness):
+    insert_data('crime_data', crime_data.dict())
+    insert_data('evidence', evidence.dict())
+    insert_data('investigator', investigator.dict())
+    insert_data('suspect', suspect.dict())
+    insert_data('witness', witness.dict())
+    return {"message": "Data inserted successfully into all tables"}
+
+
+class Evidence(BaseModel):
+    evidence_id: int
+    date_acquired: str
+    case_id: int
+    weapon_desc: str
