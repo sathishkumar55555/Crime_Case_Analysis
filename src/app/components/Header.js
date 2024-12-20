@@ -10,7 +10,7 @@ import { Switch } from "@nextui-org/react";
 import { MoonIcon } from "./MoonIcon";
 import { SunIcon } from "./SunIcon";
 import { Avatar, AvatarBadge, AvatarGroup } from '@chakra-ui/react'
-
+import MultipleDropdown from "../components/MultipleDrop";
 
 //import { ChevronDownIcon } from "@heroicons/react/solid/24/ChevronDownIcon";
 
@@ -41,33 +41,36 @@ export default function Header() {
               <div className="flex  justify-self-center mt-2">
 
                 <h2 className="text-xl text-green-500 font-bold items-center mt-2 ml-6">
-                  <Link href="/">
+                  <a href="/">
                     Crime Case Analysis
-                  </Link>
+                  </a>
                 </h2>
                 <div className=" items-center mb-42 mt-3 ml-16 text-sm text-right">
-                  <Link href="/between">
+                  <a href="/between">
                     Between
-                  </Link>
+                  </a>
 
                 </div>
                 <div className=" items-center mb-42 mt-3 ml-16 text-sm text-right">
-                  <Link
+                  <a
                     className="mt-2"
                     href="/location">
                     Location
-                  </Link>
+                  </a>
 
                 </div>
                 <div className="items-center mb-42 mt-3 ml-16 text-sm text-right">
-                  <Link
+                  <a
                     className="mt-2"
                     href="/similarity"
                     >
                    
                     Similar
                
-                  </Link>
+                  </a>
+                </div>
+                <div className="items-center mb-42 mt-2 ml-12 text-sm text-right">
+                  <MultipleDropdown/>
                 </div>
                 
               </div>
@@ -116,7 +119,7 @@ export default function Header() {
               className={`flex-1 justify-self-center pb-3  md:block md:pb-0 md:mt-0 ${navbar ? "block" : "hidden"
                 }`}
             >
-              <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 text-xs mt-1 md:space-y-0">
+              <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 text-xs mt-3.5 md:space-y-0">
                 <li>
                   By Sathish Kumar
                 </li>

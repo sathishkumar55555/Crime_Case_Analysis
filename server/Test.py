@@ -1,4 +1,4 @@
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException,Path
 import pandas as pd
 import psycopg2
 import plotly.express as px
@@ -9,6 +9,7 @@ from typing import List
 import pickle
 app = FastAPI()
 from pydantic import BaseModel
+from psycopg2 import sql
 from fastapi.middleware.cors import CORSMiddleware
 
 app.add_middleware(
@@ -78,7 +79,7 @@ def generate_plot():
     # Return the plot image
     return FileResponse(file_fig)
 
-@app.get("/crime_data")
+@app.get("/crime_data_chart")
 def get_crime_data(fromDate: str, toDate: str,option:str):
     print("Get Requested")
     try:
@@ -262,6 +263,13 @@ async def recommend(movie: str):
         return {"error": str(e)}
 
 # Define a Pydantic model for input validation
+DB_DETAILS = {
+    "host": "localhost",
+    "database": "createDB",
+    "user": "postgres",
+    "password": "2113"
+}
+
 class CrimeDataIn(BaseModel):
     date_rptd: str
     date_occ: str
@@ -273,8 +281,43 @@ class CrimeDataIn(BaseModel):
     investigator_id: int
     case_id: int
 
-# Function to insert data into PostgreSQL
-def insert_crime_data(data: CrimeDataIn):
+
+
+@app.post("/crime_data")
+async def insert_crime_data(data: CrimeDataIn):
+    try:
+        conn = psycopg2.connect(**DB_DETAILS)
+        cur = conn.cursor()
+        cur.execute("""
+            INSERT INTO crime_data (date_rptd, date_occ, crm_desc, location, weapon_desc, lat, lon, investigator_id, case_id)
+            VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s);
+        """, (data.date_rptd, data.date_occ, data.crm_desc, data.location, data.weapon_desc, data.lat, data.lon, data.investigator_id, data.case_id))
+        conn.commit()
+        conn.close()
+    except psycopg2.Error as e:
+        raise HTTPException(status_code=500, detail=f"Database Error: {e}")
+
+    return {"message": "Data inserted successfully"}
+
+
+
+
+
+
+
+
+class CrimeUpdate(BaseModel):
+    case_id: int
+    date_rptd: str = None
+    date_occ: str = None
+    crm_desc: str = None
+    location: str = None
+    weapon_desc: str = None
+    lat: float = None
+    lon: float = None
+    investigator_id: int = None
+
+def update_data(update_info: CrimeUpdate):
     try:
         conn = psycopg2.connect(
             host="localhost",
@@ -283,21 +326,146 @@ def insert_crime_data(data: CrimeDataIn):
             password="2113"
         )
         cur = conn.cursor()
-        # Insert data into the crime_data table
-        cur.execute("""
-            INSERT INTO crime_data (date_rptd, date_occ, crm_desc, location, weapon_desc, lat, lon, investigator_id, case_id)
-            VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s);
-        """, (data.date_rptd, data.date_occ, data.crm_desc, data.location, data.weapon_desc, data.lat, data.lon, data.investigator_id, data.case_id))
+
+        # Generate the SQL update query
+        update_query = sql.SQL("UPDATE crime_data SET {fields} WHERE case_id = %s")
+        update_fields = []
+
+        # Add non-null fields to the update query
+        if update_info.date_rptd is not None:
+            update_fields.append(sql.SQL("date_rptd = %s"))
+        if update_info.date_occ is not None:
+            update_fields.append(sql.SQL("date_occ = %s"))
+        if update_info.crm_desc is not None:
+            update_fields.append(sql.SQL("crm_desc = %s"))
+        if update_info.location is not None:
+            update_fields.append(sql.SQL("location = %s"))
+        if update_info.weapon_desc is not None:
+            update_fields.append(sql.SQL("weapon_desc = %s"))
+        if update_info.lat is not None:
+            update_fields.append(sql.SQL("lat = %s"))
+        if update_info.lon is not None:
+            update_fields.append(sql.SQL("lon = %s"))
+        if update_info.investigator_id is not None:
+            update_fields.append(sql.SQL("investigator_id = %s"))
+
+        if not update_fields:
+            raise HTTPException(status_code=400, detail="No fields to update")
+
+        # Construct the SET clause of the query
+        set_clause = sql.SQL(", ").join(update_fields)
+        update_query = update_query.format(fields=set_clause)
+
+        # Collect values to update
+        values = [
+            val for val in [
+                update_info.date_rptd,
+                update_info.date_occ,
+                update_info.crm_desc,
+                update_info.location,
+                update_info.weapon_desc,
+                update_info.lat,
+                update_info.lon,
+                update_info.investigator_id,
+            ] if val is not None
+        ]
+        values.append(update_info.case_id)
+
+        # Execute the update query
+        cur.execute(update_query, values)
+        conn.commit()
+    except psycopg2.Error as e:
+        raise HTTPException(status_code=500, detail=f"Database Error: {e}")
+    finally:
+        conn.close()
+
+@app.post("/update")
+def update_crime_data(update_info: CrimeUpdate):
+    update_data(update_info)
+    return {"message": "Data updated successfully"}
+@app.delete("/crime_data/{case_id}")
+async def delete_crime_data(case_id: int):
+    try:
+        conn = psycopg2.connect(**DB_DETAILS)
+        cur = conn.cursor()
+        cur.execute("DELETE FROM crime_data WHERE case_id = %s;", (case_id,))
         conn.commit()
         conn.close()
     except psycopg2.Error as e:
-        # Log the error or handle it appropriately
         raise HTTPException(status_code=500, detail=f"Database Error: {e}")
 
-@app.post("/insert")
-def insert_data(data: CrimeDataIn):
-    insert_crime_data(data)
-    return {"message": "Data inserted successfully"}
+    return {"message": "Data deleted successfully"}
+
+@app.put("/crime_data/{case_id}")
+def update_crime_data(case_id: int = Path(...), update_info: CrimeUpdate = ...):
+    update_data(case_id, update_info)
+    return {"message": "Data updated successfully"}
+
+@app.get("/crime_data")
+async def read_crime_data():
+    try:
+        conn = psycopg2.connect(
+            host="localhost",
+            database="createDB",
+            user="postgres",
+            password="2113"
+        )
+        cur = conn.cursor()
+        cur.execute("SELECT * FROM crime_data;")
+        rows = cur.fetchall()
+        conn.close()
+        
+        # Process fetched data
+        crime_data = []
+        for row in rows:
+            try:
+                crime_data.append({
+                    "date_rptd": row[0],
+                    "date_occ": row[1],
+                    "crm_desc": row[2],
+                    "location": row[3],
+                    "weapon_desc": row[4],
+                    "lat": row[5],
+                    "lon": row[6],
+                    "investigator_id": row[7],
+                    "case_id": row[8]
+                })
+            except ValueError as e:
+                # Log the error and continue to the next row
+                print(f"Error processing row: {e}")
+                continue
+        
+        return crime_data
+        
+    except psycopg2.Error as e:
+        raise HTTPException(status_code=500, detail=f"Database Error: {e}")
+
+@app.get("/crime_data/{case_id}")
+async def read_single_crime_data(case_id: int):
+    try:
+        conn = psycopg2.connect(**DB_DETAILS)
+        cur = conn.cursor()
+        cur.execute("SELECT * FROM crime_data WHERE case_id = %s;", (case_id,))
+        row = cur.fetchone()
+        conn.close()
+        
+        if row is None:
+            raise HTTPException(status_code=404, detail="Data not found")
+
+        return {
+            "date_rptd": row[0],
+            "date_occ": row[1],
+            "crm_desc": row[2],
+            "location": row[3],
+            "weapon_desc": row[4],
+            "lat": row[5],
+            "lon": row[6],
+            "investigator_id": row[7],
+            "case_id": row[8]
+        }
+    except psycopg2.Error as e:
+        raise HTTPException(status_code=500, detail=f"Database Error: {e}")
+
 
 
 def insert_evidence_data(data):
@@ -331,7 +499,95 @@ def insert_evidence(data: EvidenceIn):
     insert_evidence_data(data)
     return {"message": "Evidence data inserted successfully"}
 
+class InvestigatorDataIn(BaseModel):
+    investigator_id: int
+    name: str
+    date_of_birth: str
+    department: str
+    case_id: int
+
+@app.post("/insert-investigator")
+def insert_investigator_data(data: InvestigatorDataIn):
+    try:
+        conn = psycopg2.connect(
+            host="localhost",
+            database="createDB",
+            user="postgres",
+            password="2113"
+        )
+        cur = conn.cursor()
+        # Insert data into the investigator table
+        cur.execute("""
+            INSERT INTO investigator (investigator_id, name, date_of_birth, department, case_id)
+            VALUES (%s, %s, %s, %s, %s);
+        """, (data.investigator_id, data.name, data.date_of_birth, data.department, data.case_id))
+        conn.commit()
+        conn.close()
+        return {"message": "Data inserted successfully"}
+    except psycopg2.Error as e:
+        # Log the error or handle it appropriately
+        raise HTTPException(status_code=500, detail=f"Database Error: {e}")
+    
+class SuspectDataIn(BaseModel):
+    suspect_id: int
+    name: str
+    dob: str
+    case_id: int
+
+@app.post("/insert-suspect")
+def insert_suspect_data(data: SuspectDataIn):
+    try:
+        conn = psycopg2.connect(
+            host="localhost",
+            database="createDB",
+            user="postgres",
+            password="2113"
+        )
+        cur = conn.cursor()
+        # Insert data into the suspect table
+        cur.execute("""
+            INSERT INTO suspect (suspect_id, name, dob, case_id)
+            VALUES (%s, %s, %s, %s);
+        """, (data.suspect_id, data.name, data.dob, data.case_id))
+        conn.commit()
+        conn.close()
+        return {"message": "Data inserted successfully"}
+    except psycopg2.Error as e:
+        # Log the error or handle it appropriately
+        raise HTTPException(status_code=500, detail=f"Database Error: {e}")
+
+def insert_witness(data):
+    try:
+        conn = psycopg2.connect(
+            host="localhost",
+            database="createDB",
+            user="postgres",
+            password="2113"
+        )
+        cur = conn.cursor()
+        cur.execute("""
+            INSERT INTO witness (witness_id, name, dob, case_id)
+            VALUES (%s, %s, %s, %s);
+        """, (data.witness_id, data.name, data.dob, data.case_id))
+        conn.commit()
+        conn.close()
+    except psycopg2.Error as e:
+        raise HTTPException(status_code=500, detail=f"Database Error: {e}")
+
+class WitnessDataIn(BaseModel):
+    witness_id: int
+    name: str
+    dob: str
+    case_id: int
+
+@app.post("/insert-witness")
+async def insert_witness_data(data: WitnessDataIn):
+    insert_witness(data)
+    return {"message": "Data inserted successfully"}
+
+
 class CrimeUpdate(BaseModel):
+    case_id: int
     date_rptd: str = None
     date_occ: str = None
     crm_desc: str = None
@@ -340,7 +596,6 @@ class CrimeUpdate(BaseModel):
     lat: float = None
     lon: float = None
     investigator_id: int = None
-    case_id: int
 
 def update_data(update_info: CrimeUpdate):
     try:
@@ -353,46 +608,184 @@ def update_data(update_info: CrimeUpdate):
         cur = conn.cursor()
 
         # Generate the SQL update query
-        update_query = "UPDATE crime_data SET "
+        update_query = sql.SQL("UPDATE crime_data SET {fields} WHERE case_id = %s")
         update_fields = []
 
         # Add non-null fields to the update query
         if update_info.date_rptd is not None:
-            update_fields.append(f"date_rptd = '{update_info.date_rptd}'")
+            update_fields.append(sql.SQL("date_rptd = %s"))
         if update_info.date_occ is not None:
-            update_fields.append(f"date_occ = '{update_info.date_occ}'")
+            update_fields.append(sql.SQL("date_occ = %s"))
         if update_info.crm_desc is not None:
-            update_fields.append(f"crm_desc = '{update_info.crm_desc}'")
+            update_fields.append(sql.SQL("crm_desc = %s"))
         if update_info.location is not None:
-            update_fields.append(f"location = '{update_info.location}'")
+            update_fields.append(sql.SQL("location = %s"))
         if update_info.weapon_desc is not None:
-            update_fields.append(f"weapon_desc = '{update_info.weapon_desc}'")
+            update_fields.append(sql.SQL("weapon_desc = %s"))
         if update_info.lat is not None:
-            update_fields.append(f"lat = {update_info.lat}")
+            update_fields.append(sql.SQL("lat = %s"))
         if update_info.lon is not None:
-            update_fields.append(f"lon = {update_info.lon}")
+            update_fields.append(sql.SQL("lon = %s"))
         if update_info.investigator_id is not None:
-            update_fields.append(f"investigator_id = {update_info.investigator_id}")
+            update_fields.append(sql.SQL("investigator_id = %s"))
+
+        if not update_fields:
+            raise HTTPException(status_code=400, detail="No fields to update")
 
         # Construct the SET clause of the query
-        update_query += ", ".join(update_fields)
+        set_clause = sql.SQL(", ").join(update_fields)
+        update_query = update_query.format(fields=set_clause)
 
-        # Add WHERE clause to specify the row to update
-        update_query += f" WHERE case_id = {update_info.case_id}"
+        # Collect values to update
+        values = [
+            val for val in [
+                update_info.date_rptd,
+                update_info.date_occ,
+                update_info.crm_desc,
+                update_info.location,
+                update_info.weapon_desc,
+                update_info.lat,
+                update_info.lon,
+                update_info.investigator_id,
+            ] if val is not None
+        ]
+        values.append(update_info.case_id)
 
         # Execute the update query
-        cur.execute(update_query)
+        cur.execute(update_query, values)
         conn.commit()
-        conn.close()
     except psycopg2.Error as e:
-        # Log the error or handle it appropriately
         raise HTTPException(status_code=500, detail=f"Database Error: {e}")
+    finally:
+        conn.close()
 
 @app.post("/update")
 def update_crime_data(update_info: CrimeUpdate):
     update_data(update_info)
     return {"message": "Data updated successfully"}
 
+
+def update_evidence(data):
+    try:
+        conn = psycopg2.connect(
+            host="localhost",
+            database="createDB",
+            user="postgres",
+            password="2113"
+        )
+        cur = conn.cursor()
+        cur.execute("""
+            UPDATE evidence
+            SET date_acquired = %s, case_id = %s, weapon_desc = %s
+            WHERE evidence_id = %s;
+        """, (data.date_acquired, data.case_id, data.weapon_desc, data.evidence_id))
+        conn.commit()
+        conn.close()
+    except psycopg2.Error as e:
+        raise HTTPException(status_code=500, detail=f"Database Error: {e}")
+
+class EvidenceUpdate(BaseModel):
+    evidence_id: int
+    date_acquired: str
+    case_id: int
+    weapon_desc: str
+
+@app.post("/update-evidence")
+async def update_evidence_data(data: EvidenceUpdate):
+    update_evidence(data)
+    return {"message": "Data updated successfully"}
+
+
+def update_investigator(data):
+    try:
+        conn = psycopg2.connect(
+            host="localhost",
+            database="createDB",
+            user="postgres",
+            password="2113"
+        )
+        cur = conn.cursor()
+        cur.execute("""
+            UPDATE investigator
+            SET name = %s, date_of_birth = %s, department = %s, case_id = %s
+            WHERE investigator_id = %s;
+        """, (data.name, data.date_of_birth, data.department, data.case_id, data.investigator_id))
+        conn.commit()
+        conn.close()
+    except psycopg2.Error as e:
+        raise HTTPException(status_code=500, detail=f"Database Error: {e}")
+
+class InvestigatorUpdate(BaseModel):
+    investigator_id: int
+    name: str
+    date_of_birth: str
+    department: str
+    case_id: int
+
+@app.post("/update-investigator")
+async def update_investigator_data(data: InvestigatorUpdate):
+    update_investigator(data)
+    return {"message": "Data updated successfully"}
+
+def update_suspect(data):
+    try:
+        conn = psycopg2.connect(
+            host="localhost",
+            database="createDB",
+            user="postgres",
+            password="2113"
+        )
+        cur = conn.cursor()
+        cur.execute("""
+            UPDATE suspect
+            SET name = %s, dob = %s, case_id = %s
+            WHERE suspect_id = %s;
+        """, (data.name, data.dob, data.case_id, data.suspect_id))
+        conn.commit()
+        conn.close()
+    except psycopg2.Error as e:
+        raise HTTPException(status_code=500, detail=f"Database Error: {e}")
+
+class SuspectUpdate(BaseModel):
+    suspect_id: int
+    name: str
+    dob: str
+    case_id: int
+
+@app.post("/update-suspect")
+async def update_suspect_data(data: SuspectUpdate):
+    update_suspect(data)
+    return {"message": "Data updated successfully"}
+
+def update_witness(data):
+    try:
+        conn = psycopg2.connect(
+            host="localhost",
+            database="createDB",
+            user="postgres",
+            password="2113"
+        )
+        cur = conn.cursor()
+        cur.execute("""
+            UPDATE witness
+            SET name = %s, dob = %s, case_id = %s
+            WHERE witness_id = %s;
+        """, (data.name, data.dob, data.case_id, data.witness_id))
+        conn.commit()
+        conn.close()
+    except psycopg2.Error as e:
+        raise HTTPException(status_code=500, detail=f"Database Error: {e}")
+
+class WitnessUpdate(BaseModel):
+    witness_id: int
+    name: str
+    dob: str
+    case_id: int
+
+@app.post("/update-witness")
+async def update_witness_data(data: WitnessUpdate):
+    update_witness(data)
+    return {"message": "Data updated successfully"}
 # Define the CrimeUpdate model
 class CrimeUpdate(BaseModel):
     case_id: int

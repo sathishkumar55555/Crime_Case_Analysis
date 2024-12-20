@@ -51,7 +51,7 @@ const AddEvidence = () => {
     };
 
     return (
-        <div className='border-solid border-green-500 border-2 p-8 rounded-md mt-12 ml-44 w-[600px] text-green-500'>
+        <div className='border-solid border-green-500 border-2 p-8 rounded-md mt-12 ml-52 w-[600px] text-green-500 mb-10'>
             <h1 className='ml-[120px] mb-12 text-3xl bold'>Insert Evidence Data</h1>
             <form className='ml-10' onSubmit={handleSubmit}>
                 <div className='mt-3'>
@@ -77,7 +77,7 @@ const AddEvidence = () => {
                         name="date_acquired"
                         value={formData.date_acquired}
                         onChange={handleChange}
-                        className='bg-black border-2 border-green-500 rounded-lg ml-[83px] w-[200px] px-4'
+                        className='bg-black border-2 border-green-500 rounded-lg ml-[96px] w-[200px] px-4'
                     />
                 </div>
                 <div className='mt-3'>
@@ -103,10 +103,10 @@ const AddEvidence = () => {
                         name="weapon_desc"
                         value={formData.weapon_desc}
                         onChange={handleChange}
-                        className='bg-black border-2 border-green-500 rounded-lg ml-[50px] w-[200px] px-4'
+                        className='bg-black border-2 border-green-500 rounded-lg ml-[53px] w-[200px] px-4'
                     />
                 </div>
-                <div className='border-solid border-green-500 border-2 p-2 rounded-md ml-40 mt-12 w-[105px]'>
+                <div className='border-solid border-green-500 border-2 p-2 rounded-md ml-40 mt-12 w-[155px]'>
                     <button
                         className=''
                         type="submit"
